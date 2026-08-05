@@ -1,10 +1,18 @@
-export default function WorksHero() {
+type WorksHeroProps = {
+  activeFilter: string;
+  setActiveFilter: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function WorksHero({
+  activeFilter,
+  setActiveFilter,
+}: WorksHeroProps) {
   return (
     <section className="w-full bg-[#fffff4] px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
 
         {/* Small heading */}
-        <p className="mb-3 text-[8px] font-medium uppercase tracking-[0.08em] text-[#41b7d6] md:text-[9px]">
+        <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.08em] text-[#41b7d6] md:text-[12px]">
           Our Work
         </p>
 
@@ -14,41 +22,35 @@ export default function WorksHero() {
         </h1>
 
         {/* Description */}
-        <p className="mt-3 max-w-[330px] text-[7px] leading-[1.5] text-[#6d6d6d] md:max-w-[390px] md:text-[8px]">
+        <p className="mt-3 max-w-[330px] text-[10px] leading-[1.5] text-[#6d6d6d] md:max-w-[390px] md:text-[12px]">
           A collection of websites, UI/UX and branding projects we&apos;ve
           completed for clients across industries.
         </p>
 
         {/* Category buttons */}
-        <div className="mt-5 flex items-center justify-center gap-1.5">
-          <button
-            type="button"
-            className="rounded-full bg-[#06265f] px-3 py-1 text-[7px] font-medium text-white md:px-3.5 md:py-1.5 md:text-[8px]"
-          >
-            All
-          </button>
-
-          <button
-            type="button"
-            className="rounded-full border border-[#d5d5d0] bg-transparent px-3 py-1 text-[7px] font-medium text-[#333333] md:px-3.5 md:py-1.5 md:text-[8px]"
-          >
-            Websites
-          </button>
-
-          <button
-            type="button"
-            className="rounded-full border border-[#d5d5d0] bg-transparent px-3 py-1 text-[7px] font-medium text-[#333333] md:px-3.5 md:py-1.5 md:text-[8px]"
-          >
-            UI/UX
-          </button>
-
-          <button
-            type="button"
-            className="rounded-full border border-[#d5d5d0] bg-transparent px-3 py-1 text-[7px] font-medium text-[#333333] md:px-3.5 md:py-1.5 md:text-[8px]"
-          >
-            Branding
-          </button>
-        </div>
+        {/* Category buttons */}
+<div className="mt-5 flex items-center justify-center gap-2">
+  {[
+    { label: "All", value: "all" },
+    { label: "Websites", value: "website" },
+    { label: "UI/UX", value: "uiux" },
+    { label: "Branding", value: "branding" },
+  ].map((button) => (
+    <button
+      key={button.value}
+      type="button"
+      onClick={() => setActiveFilter(button.value)}
+      className={`rounded-full px-3 py-1 text-[7px] font-medium transition-all duration-300 md:px-3.5 md:py-1.5 md:text-[8px]
+        ${
+          activeFilter === button.value
+            ? "bg-[#06265f] text-white"
+            : "border border-[#d5d5d0] bg-transparent text-[#333333] hover:bg-[#f4f4ef]"
+        }`}
+    >
+      {button.label}
+    </button>
+  ))}
+</div>
 
       </div>
     </section>
