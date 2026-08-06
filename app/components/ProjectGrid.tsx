@@ -56,21 +56,15 @@ const projects = [
   },
 ];
 
-export default function ProjectsGrid({
-  activeFilter,
-}: ProjectsGridProps) {
-
+export default function ProjectsGrid({ activeFilter }: ProjectsGridProps) {
   const filteredProjects =
-  activeFilter === "all"
-    ? projects
-    : projects.filter(
-        (project) => project.category === activeFilter
-      );
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
     <section className="w-full bg-white px-6 pb-12 md:px-8 md:pb-16">
-      <div className="mx-auto max-w-[900px]">
-
+      <div className="mx-auto max-w-6xl md:pt-10">
         {/* Heading */}
         <FadeUp>
           <h2 className="mb-2 text-[9px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
@@ -79,12 +73,9 @@ export default function ProjectsGrid({
         </FadeUp>
 
         {/* Grid */}
-        <div className="block mt-5 md:grid grid-cols-2 gap-x-3 gap-y-8 md:gap-x-5 md:gap-y-10">
+        <div className="block mt-5 md:grid grid-cols-2 gap-x-3 gap-y-8 md:gap-x-5 md:gap-y-6">
           {filteredProjects.map((project, index) => (
-            <FadeUp
-              key={project.title}
-              delay={index * 0.08}
-            >
+            <FadeUp key={project.title} delay={index * 0.08}>
               <ProjectCard
                 title={project.title}
                 image={project.image}
@@ -93,7 +84,6 @@ export default function ProjectsGrid({
             </FadeUp>
           ))}
         </div>
-
       </div>
     </section>
   );
