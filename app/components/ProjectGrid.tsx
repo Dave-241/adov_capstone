@@ -64,7 +64,7 @@ export default function ProjectsGrid({ activeFilter }: ProjectsGridProps) {
 
   return (
     <section className="w-full bg-white px-6 pb-12 md:px-8 md:pb-16">
-      <div className="mx-auto max-w-6xl md:pt-10">
+      <div className="mx-auto max-w-6xl  md:pt-10">
         {/* Heading */}
         <FadeUp>
           <h2 className="mb-2 text-[9px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
