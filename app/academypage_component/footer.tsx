@@ -12,9 +12,9 @@ const UnderlineLink = ({ children }: { children: React.ReactNode }) => (
 
 const Footer = () => {
   return (
-    <div>
-      <div className=" flex md:flex md:justify-around gap-8 mx-auto max-w-7xl bg-[#FFFFF0] px-6 sm:px-8 md:px-4 py-10 md:py-12 border-b  border-[#7B899A]">
-        <div className="flex gap-3  flex-col col-span-2 md:col-span-1">
+    <div className=" max-w-7xl  px-6  md:px-12  mx-auto w-full">
+      <div className=" flex md:flex-row flex-col   md:justify-around gap-8  mx-auto py-10 md:py-12 border-b  border-[#7B899A]">
+        <div className="flex w-full gap-3   flex-col  md:col-span-1">
           <div>
             <Image
               src={adovlogo}
@@ -26,7 +26,7 @@ const Footer = () => {
             Creating experiences. Empowering growth.
           </h1>
         </div>
-        <div className=" m-3 grid grid-cols-3 ">
+        <div className=" gap-5 md:gap-0 grid md:grid-cols-3 ">
           <div className="flex flex-col gap-2">
             <h1 className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base">
               SERVICES

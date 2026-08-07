@@ -4,7 +4,7 @@ import hero from "../../public/home hero 1.png";
 const Section = () => {
   return (
     <div className="bg-[#FFFFF0]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 px-6 sm:px-8 md:px-12 max-w-7xl bg-[#FFFFF0] mx-auto py-8 md:py-3">
+      <div className="grid grid-cols-1 md:pt-20 md:grid-cols-2 gap-8 md:gap-4 px-6 sm:px-8 md:px-12 max-w-7xl bg-[#FFFFF0] mx-auto py-8 md:py-3">
         <div className="flex flex-col justify-center items-start order-2 md:order-1">
           <div>
             <p className="font-medium font-inter text-sm sm:text-[16px] text-[#10A4EA]">

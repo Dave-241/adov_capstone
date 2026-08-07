@@ -1,24 +1,17 @@
-import Nav from "@/app/academypage_component/nav";
-import Section from "@/app/academypage_component/section";
-import Section2 from "@/app/academypage_component/section2";
-import Section3Array from "@/app/academypage_component/section3Array";
-import Section4 from "@/app/academypage_component/section5Array";
-import Section5Array from "@/app/academypage_component/section4";
-import Section6 from "@/app/academypage_component/section6";
-import Footer from "@/app/academypage_component/footer";
-const Academypage = () => {
+import Train from "./train";
+import WhyUs from "./faq";
+import StartProject from "./startproject";
+import Founders from "./founders";
+
+const page = () => {
   return (
-    <div className=" bg-[#FFFFF0] font-inter">
-      <Nav />
-      <Section />
-      <Section2 />
-      <Section3Array />
-      <Section5Array />
-      <Section4 />
-      <Section6 />
-      <Footer />
-    </div>
+    <main>
+      <Train />
+      <WhyUs />
+      <Founders />
+      <StartProject />
+    </main>
   );
 };
 
-export default Academypage;
+export default page;
