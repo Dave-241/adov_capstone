@@ -7,22 +7,19 @@ import Services from "./hompage_component/services";
 import Work from "./hompage_component/work";
 import Projectvideo from "./hompage_component/projectvideo";
 
-
 const page = () => {
   return (
     <main>
-      <Train />
-      <WhyUs />
-      <Founders />
-      <StartProject />
-
       <Hero />
       <Services />
       <Work />
       <Projectvideo />
+      <Train />
+      <WhyUs />
+      <Founders />
+      <StartProject />
     </main>
-  )
-
+  );
 };
 
 export default page;

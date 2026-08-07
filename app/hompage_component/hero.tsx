@@ -84,7 +84,7 @@
 
 export default function Hero() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full px-12 overflow-hidden">
       {/* Background video */}
       <video
         src="/herovideo2.mp4"
@@ -92,20 +92,20 @@ export default function Hero() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute brightness-50 inset-0 w-full h-full object-cover"
       />
 
       {/* Overlay for text contrast */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/5 to-transparent" />
 
       {/* Text content */}
-      <div className="relative z-10  flex flex-col justify-center px-12 max-w-lg my-30">
-        <h1 className="text-4xl font-bold text-gray-900 leading-tight">
+      <div className="relative z-10 w-full  border2 flex flex-col justify-center  max-w-7xl mx-auto my-30">
+        <h1 className="text-4xl font-bold text-white leading-tight">
           Where Ideas
           <br />
-          Become <span className="text-blue-500">Impact</span>.
+          Become <span className="text-blue-500">Impact.</span>
         </h1>
-        <p className="text-gray-600 mt-4 text-sm">
+        <p className="text-white font-normal mt-4 text-sm">
           Partnering with businesses to build exceptional digital products and
           future-ready talent.
         </p>
