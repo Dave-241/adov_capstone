@@ -9,10 +9,10 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { label: "Home", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Works", href: "#" },
-    { label: "Academy", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "services" },
+    { label: "Works", href: "works" },
+    { label: "Academy", href: "academy" },
   ];
 
   return (
@@ -27,13 +27,12 @@ const Nav = () => {
         <ul className="hidden lg:flex gap-8 items-center">
           {links.map((link) => (
             <li key={link.label}>
-              
-                <a
-                  href={link.href}
-                  className="hover:text-gray-600 transition-colors text-[#7B899A] absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
-                >
-                  {link.label}
-                </a>
+              <a
+                href={link.href}
+                className="hover:text-gray-600 transition-colors text-[#7B899A] absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+              >
+                {link.label}
+              </a>
             </li>
           ))}
         </ul>

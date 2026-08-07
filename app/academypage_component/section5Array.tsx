@@ -6,7 +6,8 @@ const disciplines = [
   {
     icon: Layout,
     title: "Frontend development",
-    description: "Building responsive, accessible interfaces from real designs.",
+    description:
+      "Building responsive, accessible interfaces from real designs.",
     bg: "bg-[#FBEFC7]",
     iconBg: "bg-[#BBCED7]",
   },
@@ -59,14 +60,16 @@ const Section3 = () => {
     <div className="bg-[#FFFFF0]">
       <div
         ref={containerRef}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl px-12 mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
       >
         {disciplines.map((item, index) => {
           const Icon = item.icon;
           return (
             <div
               key={item.title}
-              className={`${item.bg} rounded-2xl p-6 border border-black/5 hover:shadow-2xl transition-all duration-700 ease-out ${
+              className={`${
+                item.bg
+              } rounded-2xl p-6 border border-black/5 hover:shadow-2xl transition-all duration-700 ease-out ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"

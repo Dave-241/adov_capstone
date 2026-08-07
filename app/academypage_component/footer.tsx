@@ -12,9 +12,9 @@ const UnderlineLink = ({ children }: { children: React.ReactNode }) => (
 
 const Footer = () => {
   return (
-    <div>
-      <div className=" flex md:flex md:justify-around gap-8 mx-auto max-w-7xl bg-[#FFFFF0] px-6 sm:px-8 md:px-4 py-10 md:py-12 border-b  border-[#7B899A]">
-        <div className="flex gap-3  flex-col col-span-2 md:col-span-1">
+    <div className=" max-w-7xl  px-6  md:px-12  mx-auto w-full">
+      <div className=" flex md:flex md:justify-around gap-8  mx-auto py-10 md:py-12 border-b  border-[#7B899A]">
+        <div className="flex w-full gap-3  flex-col col-span-2 md:col-span-1">
           <div>
             <Image
               src={adovlogo}

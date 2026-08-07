@@ -1,12 +1,17 @@
+import Section4 from "@/app/academypage_component/section5Array";
+
 const section5 = () => {
   return (
     <div className="   ">
-      <div className="   flex flex-col  max-w-7xl py-3 px-12 mx-auto">
-        <p className=" font-medium text-[16px] text-[#10A4EA]">SKILLS BREAKDOWN</p>
-        <h3 className="text-[40px] font-semibold text-[#031F4F] leading-[72px]">
+      <div className="bg-[#FFFFF0] flex flex-col   px-4 gap-4 md:pb-12   max-w-7xl mx-auto md:px-12      ">
+        <p className=" font-medium text-[16px] text-[#10A4EA]">
+          SKILLS BREAKDOWN
+        </p>
+        <h3 className="text-4xl font-semibold text-[#031F4F] ">
           What you'll actually learn.
         </h3>
-    
+
+        <Section4 />
       </div>
     </div>
   );
