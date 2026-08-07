@@ -1,0 +1,32 @@
+[1mdiff --git a/app/page.tsx b/app/page.tsx[m
+[1mindex b428da6..4de9042 100644[m
+[1m--- a/app/page.tsx[m
+[1m+++ b/app/page.tsx[m
+[36m@@ -1,12 +1,25 @@[m
+[32m+[m[32m"use client";[m
+[32m+[m
+[32m+[m[32mimport { useState } from "react";[m
+[32m+[m
+ import WorksHero from "./components/workshero";[m
+ import ProjectGrid from "./components/ProjectGrid";[m
+ import UiSection from "./components/UI Section";[m
+ [m
+ export default function WorksPage() {[m
+[32m+[m[32m  const [activeFilter, setActiveFilter] = useState("all");[m
+[32m+[m
+   return ([m
+     <main>[m
+[31m-      <WorksHero />[m
+[31m-      <ProjectGrid />[m
+[32m+[m[32m      <WorksHero[m
+[32m+[m[32m        activeFilter={activeFilter}[m
+[32m+[m[32m        setActiveFilter={setActiveFilter}[m
+[32m+[m[32m      />[m
+[32m+[m
+[32m+[m[32m      <ProjectGrid[m
+[32m+[m[32m        activeFilter={activeFilter}[m
+[32m+[m[32m      />[m
+[32m+[m
+       <UiSection />[m
+     </main>[m
+   );[m
