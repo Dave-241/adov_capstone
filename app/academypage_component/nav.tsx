@@ -17,8 +17,8 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="  font-semibold sticky top-0 z-99999999999 bg-[#FFFFF0] shadow-md  border-[#7B899A]">
-      <div className="max-w-7xl relative px-6 sm:px-8 lg:px-12 py-4 mx-auto flex justify-between items-center ">
+    <nav className="  font-semibold sticky px-6 sm:px-8 lg:px-12 top-0 z-99999999999 bg-[#FFFFF0] shadow-md  border-[#7B899A]">
+      <div className="max-w-7xl relative  py-4 mx-auto flex justify-between items-center ">
         {/* Logo */}
         <Link href={"/"} className="shrink-0">
           <Image src={adovlogo} alt="Adov logo" className=" w-auto" />
