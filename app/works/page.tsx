@@ -1,11 +1,24 @@
-import WorksHero from "@/app/components/workshero";
-import ProjectsGrid from "@/app/components/ProjectGrid";
+"use client";
+
+import { useState } from "react";
+
+import WorksHero from "../components/workshero";
+import ProjectGrid from "../components/ProjectGrid";
+import UiSection from "../components/UI Section";
 
 export default function WorksPage() {
+  const [activeFilter, setActiveFilter] = useState("all");
+
   return (
     <main>
-      <WorksHero />
-      <ProjectsGrid />
+      <WorksHero
+        activeFilter={activeFilter}
+        setActiveFilter={setActiveFilter}
+      />
+
+      <ProjectGrid activeFilter={activeFilter} />
+
+      <UiSection />
     </main>
   );
 }
