@@ -18,14 +18,14 @@ const Nav = () => {
 
   return (
     <nav className="  font-semibold sticky top-0 z-99999999999 bg-[#FFFFF0] shadow-md  border-[#7B899A]">
-      <div className="max-w-7xl px-6 sm:px-8 lg:px-12 py-4 mx-auto flex justify-between items-center ">
+      <div className="max-w-7xl relative px-6 sm:px-8 lg:px-12 py-4 mx-auto flex justify-between items-center ">
         {/* Logo */}
         <Link href={"/"} className="shrink-0">
           <Image src={adovlogo} alt="Adov logo" className=" w-auto" />
         </Link>
 
         {/* Desktop links - hidden below lg */}
-        <ul className="hidden lg:flex gap-8 items-center">
+        <ul className="hidden  absolute left-1/2 top-1/2 -translate-y-1/2 -translate-[50%] lg:flex gap-8 items-center">
           {links.map((link) => (
             <li key={link.label}>
               <Link
