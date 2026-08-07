@@ -1,26 +1,25 @@
-"use client";
 
-import { useState } from "react";
-
-import WorksHero from "./components/workshero";
-import ProjectGrid from "./components/ProjectGrid";
-import UiSection from "./components/UI Section";
-
-export default function WorksPage() {
-  const [activeFilter, setActiveFilter] = useState("all");
-
+import Nav from "@/app/academypage_component/nav";
+import Section from "@/app/academypage_component/section";
+import Section2 from "@/app/academypage_component/section2";
+import Section3Array from "@/app/academypage_component/section3Array";
+import Section4 from "@/app/academypage_component/section5Array";
+import Section5Array from "@/app/academypage_component/section4";
+import Section6 from "@/app/academypage_component/section6";
+import Footer from "@/app/academypage_component/footer";
+const Academypage = () => {
   return (
-    <main>
-      <WorksHero
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
-      />
-
-      <ProjectGrid
-        activeFilter={activeFilter}
-      />
-
-      <UiSection />
-    </main>
+    <div className=" bg-[#FFFFF0] font-inter">
+      <Nav />
+      <Section />
+      <Section2 />
+      <Section3Array />
+      <Section5Array />
+      <Section4 />
+      <Section6 />
+      <Footer />
+    </div>
   );
-}
+};
+
+export default Academypage;
