@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Gus Cooney",
     category: "website",
-    image: "/images/Gus Cooney.svg",
+    image: "/images/Gus Cooney.webp",
     url: "https://guscooney.com/",
   },
   {
