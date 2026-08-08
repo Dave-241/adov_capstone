@@ -2,12 +2,18 @@ import Image from "next/image";
 import adovlogo from "@/public/adovlogo.svg";
 import footerlogo from "@/public/Vector (1).svg";
 import insta from "@/public/Group.svg";
-
-const UnderlineLink = ({ children }: { children: React.ReactNode }) => (
-  <p className="relative inline-block w-fit text-[#7B899A] cursor-pointer group">
+import Link from "next/link";
+const UnderlineLink = ({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href: string;
+}) => (
+  <Link href={href} className="relative inline-block w-fit text-[#7B899A] cursor-pointer group">
     {children}
     <span className="absolute left-0 -bottom-0.5 h-[1px] w-full bg-[#7B899A] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-  </p>
+  </Link>
 );
 
 const Footer = () => {
@@ -28,33 +34,46 @@ const Footer = () => {
         </div>
         <div className=" gap-5 md:gap-0 grid md:grid-cols-3 ">
           <div className="flex flex-col gap-2">
-            <h1 className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base">
+            <Link
+              href={"/services"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
               SERVICES
-            </h1>
+            </Link>
+
             <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <UnderlineLink>Websites</UnderlineLink>
-              <UnderlineLink>UI/UX design</UnderlineLink>
-              <UnderlineLink>Branding</UnderlineLink>
+              <UnderlineLink href="/works">Websites</UnderlineLink>
+              <UnderlineLink href="/works">UI/UX design</UnderlineLink>
+              <UnderlineLink href="/works">Branding</UnderlineLink>
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base">
+            <Link
+              href={"/"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
               COMPANY
-            </h1>
+            </Link>
             <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <UnderlineLink>Works</UnderlineLink>
-              <UnderlineLink>Academy</UnderlineLink>
-              <UnderlineLink>Contact</UnderlineLink>
+              <UnderlineLink href="/works">Works</UnderlineLink>
+
+              <UnderlineLink href="/academy">Academy</UnderlineLink>
+              <UnderlineLink href="/contact">Contact</UnderlineLink>
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base">
+            <Link
+              href={"/contact"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
               CONTACT
-            </h1>
+            </Link>
             <div className="flex flex-col gap-1 text-xs sm:text-base break-words">
-              <UnderlineLink>contactadov@gmail.com</UnderlineLink>
+              <UnderlineLink href="mailto:contactadov@gmail.com">
+                contactadov@gmail.com
+              </UnderlineLink>
             </div>
           </div>
         </div>
@@ -65,10 +84,10 @@ const Footer = () => {
           <Image src={footerlogo} alt="footerlogo" />
           <h1 className="text-sm sm:text-base">2026 Adov.</h1>
         </div>
-        <div className="flex gap-2 items-center">
+        <Link href= "https://www.instagram.com/the_adov" className="flex gap-2 items-center">
           <Image src={insta} alt="instagram" />
           <h1 className="text-[#7B899A] text-sm sm:text-base">the_adov</h1>
-        </div>
+        </Link >
       </div>
     </div>
   );

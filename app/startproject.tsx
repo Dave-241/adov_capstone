@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function StartProject() {
   return (
-    <section className="bg-[#fdfbe9] px-6 py-16">
-      <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl text-center py-16 ">
-        <p className="text-sky-400 text-sm font-medium mb-3">
+    <section className="bg-[#FFFFF0] px-12 py-16  ">
+      <div className="max-w-7xl mx-auto bg-[#031F4F]  py-12  rounded-3xl text-center px-12 py-5 ">
+        <p className="text-sky-400 text-sm font-medium mb-3 ">
           Let&apos;s Build What&apos;s Next—Together.
         </p>
         <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
@@ -13,9 +15,12 @@ export default function StartProject() {
           business, or beginning your journey into tech, we&apos;re here to help
           you take the next step with confidence.
         </p>
-        <button className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
+        <Link
+          href="/contact"
+          className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition"
+        >
           Start a project →
-        </button>
+        </Link>
       </div>
     </section>
   );

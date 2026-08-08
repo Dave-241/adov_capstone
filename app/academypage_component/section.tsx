@@ -1,10 +1,10 @@
 import Image from "next/image";
 import hero from "../../public/home hero 1.png";
-
+import Link from "next/link";
 const Section = () => {
   return (
     <div className="bg-[#FFFFF0] md:px-12">
-      <div className="grid grid-cols-1 md:pt-20 md:grid-cols-2 gap-8 md:gap-4 px-6 sm:px-8  max-w-7xl bg-[#FFFFF0] mx-auto py-8 md:py-3">
+      <div className="grid grid-cols-1 md:pt-20 md:grid-cols-2 gap-8 md:gap-4  sm:px-8  max-w-7xl bg-[#FFFFF0] mx-auto py-8 md:py-3">
         <div className="flex flex-col justify-center items-start order-2 md:order-1">
           <div>
             <p className="font-medium font-inter text-sm sm:text-[16px] text-[#10A4EA]">
@@ -20,12 +20,12 @@ const Section = () => {
             </p>
           </div>
           <div className="gap-3 sm:gap-4 flex mt-5 md:mt-3 flex-wrap">
-            <button className="bg-[#031F4F] text-white px-5 sm:px-6 py-2 rounded-3xl hover:bg-[#0a337a] text-sm sm:text-base">
+            <Link
+              href="/contact"
+              className="bg-[#031F4F] text-white px-5 sm:px-6 py-2 rounded-3xl hover:bg-[#0a337a] text-sm sm:text-base"
+            >
               Register now
-            </button>
-            <button className="text-[#031F4F] border-[#031F4F] border px-5 sm:px-6 py-2 hover:bg-[#dcdfe4] rounded-3xl text-sm sm:text-base">
-              Log in
-            </button>
+            </Link>
           </div>
         </div>
 
