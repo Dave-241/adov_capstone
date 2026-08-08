@@ -8,7 +8,7 @@ export default function WorksHero({
   setActiveFilter,
 }: WorksHeroProps) {
   return (
-    <section className="w-full bg-[#fffff4] px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
+    <section className="w-full bg-[#ffffff] px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
 
         {/* Small heading */}
