@@ -60,7 +60,7 @@ const Section3 = () => {
     <div className="bg-[#FFFFF0]">
       <div
         ref={containerRef}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
+        className="grid grid-cols-1 text-left sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
       >
         {disciplines.map((item, index) => {
           const Icon = item.icon;

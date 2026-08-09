@@ -1,16 +1,13 @@
 "use client";
 
-// import { motion } from "motion/react";
+import { motion } from "motion/react";
 
 type FadeUpProps = {
   children: React.ReactNode;
   delay?: number;
 };
 
-export default function FadeUp({
-  children,
-  delay = 0,
-}: FadeUpProps) {
+export default function FadeUp({ children, delay = 0 }: FadeUpProps) {
   return (
     <motion.div
       initial={{

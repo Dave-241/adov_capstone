@@ -52,7 +52,8 @@ const Section3Array = () => {
     <div className=" ">
       <div
         ref={containerRef}
-        className="grid  grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3  mx-auto "
+        className="grid  md:mt-0 mt-2
+         text-left grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3  mx-auto "
       >
         {programWeeks.map((item, index) => (
           <div
@@ -64,13 +65,13 @@ const Section3Array = () => {
             }`}
             style={{ transitionDelay: isVisible ? `${index * 120}ms` : "0ms" }}
           >
-            <p className="font-medium text-sm sm:text-[16px] text-[#10A4EA]">
+            <p className="font-medium text-lg md:text-xl text-[#10A4EA]">
               {item.week}
             </p>
-            <h3 className="text-sm sm:text-[16px] font-semibold text-[#031F4F]">
+            <h3 className="text-base  font-semibold text-[#031F4F]">
               {item.title}
             </h3>
-            <p className="text-[#7B899A] font-medium text-xs sm:text-[10px] max-w-md">
+            <p className="text-[#7B899A] font-medium text-sm ] max-w-md">
               {item.description}
             </p>
           </div>

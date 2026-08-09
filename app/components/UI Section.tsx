@@ -8,16 +8,16 @@ import Lightbox from "./Lightbox";
 import uiProjects from "./uiData";
 
 export default function UISection() {
-  const [selectedProject, setSelectedProject] =
-    useState<(typeof uiProjects)[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof uiProjects)[0] | null
+  >(null);
 
   return (
-    <section className="w-full bg-white px-6 pt-16 pb-12 md:px-8 md:pt-0 md:pb-16">
-      <div className="mx-auto max-w-6xl">
-
+    <section className="w-full bg-white px-6 md:pt-16 pb-12 md:px-8 md:pt-0 md:pb-16">
+      <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <FadeUp>
-          <h2 className="mb-4 text-[12px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-[18px]">
+          <h2 className="mb-3  text-2xl text-center md:text-left font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
             UI/UX
           </h2>
         </FadeUp>

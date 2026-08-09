@@ -55,7 +55,7 @@ export default function ProjectCard({ title, image, url }: ProjectCardProps) {
         </div>
 
         {/* Project title */}
-        <h3 className="mt-2 text-base font-semibold text-black md:text-2xl">
+        <h3 className="mt-2  font-semibold text-black text-2xl md:text-2xl">
           {title}
         </h3>
       </article>

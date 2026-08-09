@@ -38,18 +38,17 @@ const Nav = () => {
           ))}
         </ul>
 
-        {/* Desktop contact button - hidden below lg */}
         <Link
           href={"/contact"}
-          className="hidden lg:flex border hover:bg-gray-100 font-bold py-2 px-4 rounded-xl gap-1 items-center"
+          className="hidden lg:flex border border-[#031F4F] text-[#031F4F] hover:bg-gray-100 dark:border-[#031F4F] dark:text-[#031F4F] dark:hover:bg-gray-100 dark:bg-transparent font-bold py-2 px-4 rounded-xl gap-1 items-center"
         >
           <span>Contact us</span>
           <PenLine className="scale-75" />
         </Link>
 
-        {/* Mobile / tablet menu toggle - shown below lg */}
+        {/* Mobile / tablet menu toggle */}
         <button
-          className="lg:hidden p-2 border rounded-lg"
+          className="lg:hidden p-2 border border-[#031F4F] text-[#031F4F] dark:border-[#031F4F] dark:text-[#031F4F] dark:bg-transparent rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -57,15 +56,14 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* Mobile / tablet dropdown */}
       {isOpen && (
-        <div className="lg:hidden px-6 sm:px-8 pb-4">
+        <div className="lg:hidden   pb-4">
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="block hover:text-gray-600 transition-colors"
+                  className="block text-lg text-[#7B899A] hover:text-gray-600 dark:text-[#7B899A] dark:hover:text-gray-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -76,7 +74,7 @@ const Nav = () => {
 
           <Link
             href={"/contact"}
-            className="mt-4 w-full border hover:bg-gray-100 font-bold py-2 px-4 rounded-xl flex gap-1 items-center justify-center"
+            className="mt-4 w-full border border-[#031F4F] text-[#031F4F] dark:border-[#031F4F] dark:text-[#031F4F] dark:bg-transparent dark:hover:bg-gray-100 hover:bg-gray-100 font-bold py-4 px-4 rounded-xl flex gap-1 items-center justify-center"
           >
             <span>Contact us</span>
             <PenLine className="scale-75" />

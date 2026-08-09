@@ -6,7 +6,7 @@ const cohorts = [
 
 const Section6 = () => {
   return (
-    <div className="flex flex-col py-8 px-3 md:px-12 mx-auto justify-center">
+    <div className="flex flex-col  pt-12 md:pt-8 px-3 md:px-12 mx-auto justify-center">
       <div className="flex flex-col max-w-7xl gap-4 mx-auto justify-center w-full">
         <p className="font-medium text-sm md:text-base text-[#10A4EA]">
           COHORTS
