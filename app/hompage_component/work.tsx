@@ -1,9 +1,7 @@
 import Link from "next/link";
 
 const workItems = [
-  { title: "Anzza",
-     image: "/anzza_1.png", 
-     url: "https://snackanzza.com/" },
+  { title: "Anzza", image: "/anzza_1.png", url: "https://snackanzza.com/" },
   {
     title: "Pawp Water",
     image: "/pawpwater_2.png",
@@ -18,14 +16,17 @@ const workItems = [
 
 export default function GlimpseOfWork() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto pt-16 pb-10 bg-[#fffff0]">
       <h2 className="text-3xl font-semibold text-slate-900 mb-8 text-center">
         A glimpse of the work
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <ImageCard item={workItems[0]} className="aspect-[3/4] sm:row-span-2" />
-        <ImageCard item={workItems[1]} className="aspect-[16/9] " />
-        <ImageCard item={workItems[2]} className="aspect-[16/9] " />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-5">
+        <ImageCard
+          item={workItems[0]}
+          className="aspect-[3/2] md:aspect-[3/4.1] sm:row-span-2"
+        />
+        <ImageCard item={workItems[1]} className="aspect-[3/2] " />
+        <ImageCard item={workItems[2]} className="aspect-[3/2]" />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 export default function StudySession() {
   return (
-    <div className=" mx-auto py-16">
-      <div className="relative w-full h-[380px] rounded-2xl overflow-hidden">
+    <div className=" mx-auto pt-16 bg-[#fffff0]">
+      <div className="relative w-full h-[600px] overflow-hidden">
         <video
           src="/session.mp4"
           autoPlay
