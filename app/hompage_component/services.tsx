@@ -31,12 +31,12 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-semibold text-slate-900 mb-8">
+    <div className="max-w-7xl mx-auto pt-16 bg-[#fffff0]">
+      <h2 className="text-3xl font-semibold text-slate-900 text-center mx-auto md:text-left">
         Three services. One studio.
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
@@ -55,7 +55,7 @@ export default function Services() {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
             />
 
-            <div
+            {/* <div
               className={`absolute bottom-3 left-3 right-3 rounded-xl p-4 transition-transform duration-300 group-hover:-translate-y-1 ${
                 service.active
                   ? "bg-slate-900 text-white"
@@ -63,7 +63,21 @@ export default function Services() {
               }`}
             >
               <div
-                className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-semibold mb-2 ${
+                className={`w-6 h-6 rounded-md flex items-center justify-center text-1xl font-semibold mb-2 ${
+                  service.active
+                    ? "bg-white/10 text-white"
+                    : "bg-blue-50 text-blue-600"
+                }`}
+              > */}
+            <div
+              className={`absolute bottom-3 left-3 right-3 rounded-xl p-4 min-h-[130px] flex flex-col justify-center transition-transform duration-300 group-hover:-translate-y-1 ${
+                service.active
+                  ? "bg-slate-900 text-white"
+                  : "bg-white text-slate-900"
+              }`}
+            >
+              <div
+                className={`w-6 h-6 rounded-md flex items-center justify-center text-xl font-semibold mb-2 ${
                   service.active
                     ? "bg-white/10 text-white"
                     : "bg-blue-50 text-blue-600"
@@ -71,9 +85,9 @@ export default function Services() {
               >
                 {service.letter}
               </div>
-              <h3 className="text-sm font-semibold">{service.title}</h3>
+              <h3 className="text-2xl font-semibold">{service.title}</h3>
               <p
-                className={`text-xs mt-1 ${
+                className={`text-xs font-bold mt-1 ${
                   service.active ? "text-white/70" : "text-slate-500"
                 }`}
               >
