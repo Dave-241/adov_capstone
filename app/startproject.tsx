@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function StartProject() {
   return (
-    <section className="bg-[#fffff0] md:pt-20 pt-12 px-3 ">
-      <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl text-center py-12  md:py-20">
+    <section className=" md:pt-20 max-w-7xl md:px-12 pt-12 px-4">
+      <div className=" mx-auto bg-[#031F4F] rounded-3xl text-center py-12  md:py-20">
         <p className="text-sky-400 text-sm font-medium mb-3">
           Let&apos;s Build What&apos;s Next—Together.
         </p>

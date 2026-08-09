@@ -15,8 +15,8 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="bg-[#fdfbe9] py-6">
-      <div className="max-w-6xl mx-auto px-12">
+    <section className="  py-6 max-w-7xl mx-auto px-4 md:px-12">
+      <div className="">
         {/* Heading */}
         <p className="text-sky-500 text-sm font-semibold tracking-wide uppercase mb-3">
           Why Adov
@@ -30,7 +30,7 @@ export default function WhyUs() {
         {/* Feature cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {features.map((f) => (
-            <div key={f.title} className="border-t border-slate-300 pt-4 ">
+            <div key={f.title} className="border-t px-3 border-slate-300 pt-4 ">
               <h3 className="font-semibold text-slate-900 mb-2  ">{f.title}</h3>
               <p className="text-sm text-slate-500 ">{f.desc}</p>
             </div>

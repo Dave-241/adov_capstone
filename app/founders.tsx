@@ -7,8 +7,8 @@ export default function Founders() {
   ];
 
   return (
-    <section className="bg-[#fdfbe9] py-4">
-      <div className="max-w-5xl mx-auto px-12">
+    <section className=" max-w-7xl mx-auto px-12 py-4">
+      <div className="">
         <p className="text-center text-slate-500 text-sm mb-10 px-16">
           Built for founders, studios and teams shipping real products
         </p>

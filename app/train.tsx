@@ -6,7 +6,7 @@ export default function Train() {
     { num: "04", label: "Branding", color: "bg-orange-400" },
   ];
   return (
-    <section className="bg-[#fdfbe9] py-16 px-6">
+    <section className="  py-12  md:px-12 px-4">
       <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl p-10 md:p-12 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: copy + CTAs */}
         <div>
