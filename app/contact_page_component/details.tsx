@@ -99,58 +99,59 @@
 
 // export default Details;
 
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import Image from "next/image";
 import atimage from "@/public/atimage.png";
 import instalogo from "@/public/instalogo.png";
 
 const Details = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    helpWith: '',
-    message: '',
+    fullName: "",
+    email: "",
+    helpWith: "",
+    message: "",
   });
-  const [status, setStatus] = useState(''); // '', 'sending', 'sent', 'error'
+  const [status, setStatus] = useState(""); // '', 'sending', 'sent', 'error'
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (res.ok) {
-        setStatus('sent');
-        setFormData({ fullName: '', email: '', helpWith: '', message: '' });
+        setStatus("sent");
+        setFormData({ fullName: "", email: "", helpWith: "", message: "" });
       } else {
-        setStatus('error');
+        setStatus("error");
       }
     } catch {
-      setStatus('error');
+      setStatus("error");
     }
   };
 
   return (
     <div>
       <div className="w-full max-w-7xl mx-auto px-4 md:px-0 flex flex-col md:flex-row mb-8 justify-center gap-6 md:gap-0">
-
         <form
           onSubmit={handleSubmit}
           className="bg-[#FFFFFF] flex flex-col gap-6 md:gap-9 py-8 md:py-19 px-6 md:px-8 rounded-3xl border w-full md:w-auto"
         >
           <div className="flex flex-col gap-[15px]">
-            <label className="text-[#031F4F] font-semibold text-[16px]">Full name</label>
+            <label className="text-[#031F4F] font-semibold text-[16px]">
+              Full name
+            </label>
             <input
               name="fullName"
               value={formData.fullName}
@@ -163,7 +164,9 @@ const Details = () => {
           </div>
 
           <div className="flex flex-col gap-[15px]">
-            <label className="text-[#031F4F] font-semibold text-[16px]">Email address</label>
+            <label className="text-[#031F4F] font-semibold text-[16px]">
+              Email address
+            </label>
             <input
               name="email"
               value={formData.email}
@@ -175,7 +178,9 @@ const Details = () => {
           </div>
 
           <div className="flex flex-col gap-[15px]">
-            <label className="text-[#031F4F] font-semibold text-[16px]">What do you need help with?</label>
+            <label className="text-[#031F4F] font-semibold text-[16px]">
+              What do you need help with?
+            </label>
             <input
               name="helpWith"
               value={formData.helpWith}
@@ -187,7 +192,9 @@ const Details = () => {
           </div>
 
           <div className="flex flex-col gap-[15px]">
-            <label className="text-[#031F4F] font-semibold text-[16px]">Message</label>
+            <label className="text-[#031F4F] font-semibold text-[16px]">
+              Message
+            </label>
             <textarea
               name="message"
               value={formData.message}
@@ -201,17 +208,21 @@ const Details = () => {
           <div>
             <button
               type="submit"
-              disabled={status === 'sending'}
+              disabled={status === "sending"}
               className="w-full md:w-auto font-medium cursor-pointer border transition duration-300 hover:border-[#031F4F] hover:bg-white hover:text-[#031F4F] bg-[#031F4F] text-[16px] py-[14px] px-[30px] rounded-[40px] text-white disabled:opacity-50"
             >
-              {status === 'sending' ? 'Sending...' : 'Send message'}
+              {status === "sending" ? "Sending..." : "Send message"}
             </button>
 
-            {status === 'sent' && (
-              <p className="text-green-600 text-sm mt-3">Message sent successfully!</p>
+            {status === "sent" && (
+              <p className="text-green-600 text-sm mt-3">
+                Message sent successfully!
+              </p>
             )}
-            {status === 'error' && (
-              <p className="text-red-600 text-sm mt-3">Something went wrong. Please try again.</p>
+            {status === "error" && (
+              <p className="text-red-600 text-sm mt-3">
+                Something went wrong. Please try again.
+              </p>
             )}
           </div>
         </form>
