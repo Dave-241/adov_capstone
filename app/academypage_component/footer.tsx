@@ -31,20 +31,21 @@ type FooterLinkGroup = {
 };
 
 const footerLinkGroups: FooterLinkGroup[] = [
-  {
-    title: "SERVICES",
-    links: [
-      { label: "Websites", href: "/services/websites" },
-      { label: "UI/UX design", href: "/services/ui-ux-design" },
-      { label: "Branding", href: "/services/branding" },
-    ],
-  },
+  // {
+  //   title: "SERVICES",
+  //   links: [
+  //     { label: "Websites", href: "/services/websites" },
+  //     { label: "UI/UX design", href: "/services/ui-ux-design" },
+  //     { label: "Branding", href: "/services/branding" },
+  //   ],
+  // },
   {
     title: "COMPANY",
     links: [
-      { label: "Works", href: "/works" },
-      { label: "Academy", href: "/academy" },
-      { label: "Contact", href: "/contact" },
+      { label: "Home", href: "/" },
+    { label: "Services", href: "services" },
+    { label: "Works", href: "works" },
+    { label: "Academy", href: "academy" },
     ],
   },
   {
@@ -72,7 +73,7 @@ const Footer = () => {
               Creating experiences. Empowering growth.
             </h1>
           </div>
-          <div className=" gap-6 md:gap-0 grid md:grid-cols-3  w-full ">
+          <div className="  flex  gap-6 md:gap-24 md:flex-row flex-col     ">
             {footerLinkGroups.map((group) => (
               <div key={group.title} className="flex flex-col gap-1">
                 <h1 className="text-[#7B899A] font-semibold hover:text-gray-700 transition-colors text-sm sm:text-sm">
