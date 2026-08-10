@@ -61,19 +61,20 @@ const Nav = () => {
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
                   className="block text-lg text-[#7B899A] hover:text-gray-600 dark:text-[#7B899A] dark:hover:text-gray-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           <Link
             href={"/contact"}
+            onClick={() => setIsOpen(false)}
             className="mt-4 w-full border border-[#031F4F] text-[#031F4F] dark:border-[#031F4F] dark:text-[#031F4F] dark:bg-transparent dark:hover:bg-gray-100 hover:bg-gray-100 font-bold py-4 px-4 rounded-xl flex gap-1 items-center justify-center"
           >
             <span>Contact us</span>
