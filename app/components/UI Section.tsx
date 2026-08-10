@@ -29,7 +29,7 @@ export default function UISection() {
               <UICard
                 key={project.id}
                 project={project}
-                // onClick={() => setSelectedProject(project)}
+                onClick={() => setSelectedProject(project)}
               />
             ))}
           </div>
