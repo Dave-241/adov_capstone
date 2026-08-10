@@ -13,7 +13,10 @@ import StartProject from "../startproject";
 
 const page = () => {
   return (
-    <div className="bg-[#fffff0] md:px-12 px-4">
+    <>
+    
+  
+    <div className="bg-[#fffff0]  md:px-12 px-4">
       <Whatwedo />
 
       <SectionTitle
@@ -40,8 +43,10 @@ const page = () => {
       <How_ww />
       <How_ww_boxes />
 
-            <StartProject />
+ 
     </div>
+               <StartProject />
+                 </>
   );
 };
 
