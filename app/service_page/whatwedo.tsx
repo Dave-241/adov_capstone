@@ -1,7 +1,7 @@
 const WhatWeDo = () => {
   return (
     <div className="w-full">
-      <div className="w-full max-w-7xl mx-auto md:pt-20 pt-14 px-2 md:px-10 flex flex-col justify-center items-center gap-[4px] text-center">
+      <div className="w-full max-w-7xl text-balance mx-auto md:pt-20 pt-14 px-2 md:px-10 flex flex-col justify-center items-center gap-[4px] text-center">
         <p className="font-medium text-[13px] md:text-[16px] text-[#10A4EA] tracking-[0.1]">
           WHAT WE DO
         </p>
