@@ -62,8 +62,12 @@ export default function ProjectsGrid({ activeFilter }: ProjectsGridProps) {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
+  if (filteredProjects.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="w-full bg-white px-6 pb-12 md:px-12 md:pb-16">
+    <section className="w-full  px-6 pb-12 md:px-12 md:pb-16">
       <div className="mx-auto max-w-7xl md:pt-10">
         {/* Heading */}
         <FadeUp>

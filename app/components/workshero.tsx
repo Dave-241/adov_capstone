@@ -8,7 +8,7 @@ export default function WorksHero({
   setActiveFilter,
 }: WorksHeroProps) {
   return (
-    <section className="w-full bg-[#ffffff] px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
+    <section className="w-full px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
       <div className="mx-auto flex max-w-3xl gap-3 md:gap-3 flex-col items-center text-center">
         {/* Small heading */}
         <p className=" text-sm font-medium uppercase tracking-[0.08em] text-[#41b7d6] md:text-sm">
@@ -33,13 +33,13 @@ export default function WorksHero({
             { label: "All", value: "all" },
             { label: "Websites", value: "website" },
             { label: "UI/UX", value: "uiux" },
-            { label: "Branding", value: "branding" },
+            // { label: "Branding", value: "branding" },
           ].map((button) => (
             <button
               key={button.value}
               type="button"
               onClick={() => setActiveFilter(button.value)}
-              className={`rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 md:px-6 md:py-1.5 md:text-sm
+              className={`rounded-full cursor-pointer px-6 py-2 text-sm font-medium transition-all duration-300 md:px-6 md:py-1.5 md:text-sm
         ${
           activeFilter === button.value
             ? "bg-[#06265f] text-white"

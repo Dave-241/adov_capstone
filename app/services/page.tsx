@@ -9,6 +9,7 @@ import wimage from "@/public/wimage.png";
 import uiux_image from "@/public/uiux_image.png";
 import bimage from "@/public/bimage.png";
 import SectionTitle from "./section_title";
+import StartProject from "../startproject";
 
 const page = () => {
   return (
@@ -38,6 +39,8 @@ const page = () => {
 
       <How_ww />
       <How_ww_boxes />
+
+            <StartProject />
     </div>
   );
 };

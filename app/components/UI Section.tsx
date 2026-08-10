@@ -7,13 +7,28 @@ import UICard from "./UICards";
 import Lightbox from "./Lightbox";
 import uiProjects from "./uiData";
 
-export default function UISection() {
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof uiProjects)[0] | null
-  >(null);
+type UISectionProps = {
+  activeFilter: string;
+};
+
+type UIProject = (typeof uiProjects)[number];
+
+export default function UISection({ activeFilter }: UISectionProps) {
+  const [selectedProject, setSelectedProject] = useState<UIProject | null>(
+    null
+  );
+
+  const filteredProjects =
+    activeFilter === "all"
+      ? uiProjects
+      : uiProjects.filter((project) => project.category === activeFilter);
+
+  if (filteredProjects.length === 0) {
+    return null;
+  }
 
   return (
-    <section className="w-full bg-white px-6 md:pt-16 pb-12 md:px-8 md:pt-0 md:pb-16">
+    <section className="w-full  px-6 md:pt-16 pb-12 md:px-8 md:pt-0 md:pb-16">
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <FadeUp>
@@ -25,7 +40,7 @@ export default function UISection() {
         {/* UI Cards */}
         <FadeUp delay={0.15}>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {uiProjects.map((project) => (
+            {filteredProjects.map((project) => (
               <UICard
                 key={project.id}
                 project={project}

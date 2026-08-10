@@ -13,10 +13,10 @@ export default function Founders() {
           Built for founders, studios and teams shipping real products
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid w-full grid-cols-2 md:grid-cols-4 text-center gap-8 mb-8">
           {stats.map((s) => (
             <div key={s.label}>
-              <p className="text-2xl font-bold text-slate-900">{s.value}</p>
+              <p className="text-2xl md:text-3xl font-bold text-slate-900">{s.value}</p>
               <p className="text-xs text-slate-500 mt-1">{s.label}</p>
             </div>
           ))}
