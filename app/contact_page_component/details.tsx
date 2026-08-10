@@ -146,7 +146,7 @@ const Details = () => {
       <div className="w-full max-w-7xl mx-auto px-4 md:px-0 flex flex-col md:flex-row mb-8 justify-center gap-6 md:gap-0">
         <form
           onSubmit={handleSubmit}
-          className="bg-[#FFFFFF] flex flex-col gap-6 md:gap-9 py-8 md:py-19 px-6 md:px-8 rounded-3xl border w-full md:w-auto"
+          className="bg-[#FFFFFF] flex text-black flex-col gap-6 md:gap-9 py-8 md:py-19 px-6 md:px-8 rounded-3xl border w-full md:w-auto"
         >
           <div className="flex flex-col gap-[15px]">
             <label className="text-[#031F4F] font-semibold text-[16px]">

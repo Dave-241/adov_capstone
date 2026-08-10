@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="bg-[#fffff0] relative w-full px-4 sm:px-8 md:px-12 overflow-hidden flex items-center md:min-h-[70vh] min-h-[60vh] py-16 sm:py-24 md:py-32">
@@ -31,19 +33,19 @@ export default function Hero() {
 
         {/* Buttons Container - Updated to ensure full width on mobile and centered */}
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 sm:mt-10 w-full max-w-md sm:max-w-none justify-center md:justify-start">
-          <a
-            href="#"
-            className="block sm:inline-block bg-[#0f172b] text-white text-base font-semibold px-8 py-4 rounded-full hover:bg-slate-800 transition-colors text-center w-full sm:w-auto"
+          <Link
+            href="/contact"
+            className="block sm:inline-block bg-[#0f172b] text-white text-base font-semibold px-8 py-3 rounded-full hover:bg-slate-800 transition-colors text-center w-full sm:w-auto"
           >
             Start a project +
-          </a>
+          </Link>
 
-          <a
-            href="#"
-            className="block sm:inline-block bg-white text-[#0f172b] text-base font-semibold px-8 py-4 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors text-center w-full sm:w-auto"
+          <Link
+            href="/works"
+            className="block sm:inline-block bg-white text-[#0f172b] text-base font-semibold px-8 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors text-center w-full sm:w-auto"
           >
             See our work
-          </a>
+          </Link>
         </div>
       </div>
     </div>

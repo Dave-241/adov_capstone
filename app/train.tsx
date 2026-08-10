@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Train() {
   const modules = [
     { num: "01", label: "Frontend development", color: "bg-yellow-400" },
@@ -22,12 +24,10 @@ export default function Train() {
           </p>
 
           <div className="flex items-center gap-4">
-            <button className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
+            <Link href={'/contact'} className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-12 py-3 rounded-full transition">
               Register now
-            </button>
-            <button className="border border-slate-500 hover:border-slate-300 text-white text-sm font-medium px-6 py-3 rounded-full transition">
-              Log in
-            </button>
+            </Link>
+         
           </div>
         </div>
 
