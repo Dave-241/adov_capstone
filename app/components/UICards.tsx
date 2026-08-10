@@ -17,10 +17,11 @@ type Props = {
 export default function UICard({ project, onClick }: Props) {
   return (
     <button
-      // onClick={onClick}
-      className="group w-full overflow-hidden text-left"
+      type="button"
+      onClick={onClick}
+      className="group w-full text-left"
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
+      <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl">
         <Image
           src={project.cover}
           alt={project.title}
@@ -29,7 +30,7 @@ export default function UICard({ project, onClick }: Props) {
         />
       </div>
 
-      <h3 className="mt-2  font-semibold text-black text-2xl md:text-2xl">
+      <h3 className="mt-3 text-base font-semibold text-black md:text-2xl">
         {project.title}
       </h3>
     </button>
