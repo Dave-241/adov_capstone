@@ -5,7 +5,7 @@ const heading = () => {
         <p className="text-[16px] tracking-[1.6px] text-[#10A4EA] font-medium ">
           GET IN TOUCH
         </p>
-        <p className="text-4xl font-medium text-[#031F4F]  ">
+        <p className="text-3xl md:text-4xl font-medium text-[#031F4F]  ">
           Great Ideas Begin with Great Conversations.
         </p>
         <p className="text-[16px] font-semibold text-[#7B899A] ">
