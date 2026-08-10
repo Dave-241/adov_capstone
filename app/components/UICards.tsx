@@ -20,21 +20,20 @@ export default function UICard({
 }: Props) {
   return (
     <button
+      type="button"
       onClick={onClick}
-      className="group w-full overflow-hidden rounded-3xl text-left"
+      className="group w-full text-left"
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
-
+      <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl">
         <Image
           src={project.cover}
           alt={project.title}
           fill
           className="object-cover transition duration-500 group-hover:scale-105"
         />
-
       </div>
 
-      <h3 className="mt-3 text-lg font-semibold text-[#06265f]">
+      <h3 className="mt-3 text-base font-semibold text-black md:text-2xl">
         {project.title}
       </h3>
     </button>

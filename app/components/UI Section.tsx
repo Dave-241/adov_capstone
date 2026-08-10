@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import FadeUp from "./FadeUp";
-import UICard from "./UICard";
+import UICard from "./UICards";
 import Lightbox from "./Lightbox";
 import uiProjects from "./uiData";
 
@@ -17,7 +17,7 @@ export default function UISection() {
 
         {/* Section Heading */}
         <FadeUp>
-          <h2 className="mb-4 text-[12px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-[18px]">
+          <h2 className="mb-4 text-[9px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-[21px] ">
             UI/UX
           </h2>
         </FadeUp>
@@ -29,7 +29,7 @@ export default function UISection() {
               <UICard
                 key={project.id}
                 project={project}
-                onClick={() => setSelectedProject(project)}
+                // onClick={() => setSelectedProject(project)}
               />
             ))}
           </div>

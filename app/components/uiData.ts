@@ -7,16 +7,25 @@ const uiProjects = [
     screens: [
       "/images/ui/finora-full.webp",
     ],
-
   },
 
   {
-     id: 2,
+    id: 2,
     title: "Nova",
     cover: "/images/ui/Nova.webp",
 
     screens: [
       "/images/ui/Fullnova.jpg",
+    ],
+  },
+
+  {
+    id: 3,
+    title: "Kept",
+    cover: "/images/ui/kept-cover.png",
+
+    screens: [
+      "/images/ui/kept-full.png",
     ],
   },
 ];
