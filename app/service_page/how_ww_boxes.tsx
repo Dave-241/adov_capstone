@@ -30,7 +30,7 @@ const processData = [
 
 const How_ww_boxes = () => {
   return (
-    <div className="my-8 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-[12px]">
+    <div className="mt-8 w-full  grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto  flex flex-col md:flex-row gap-[12px]">
       {processData.map((step) => (
         <div
           key={step.id}

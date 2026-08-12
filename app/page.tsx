@@ -1,26 +1,25 @@
-"use client";
+import Train from "./train";
+import WhyUs from "./faq";
+import StartProject from "./startproject";
+import Founders from "./founders";
+import Hero from "./hompage_component/hero";
+import Services from "./hompage_component/services";
+import Work from "./hompage_component/work";
+import Projectvideo from "./hompage_component/projectvideo";
 
-import { useState } from "react";
-
-import WorksHero from "./components/workshero";
-import ProjectGrid from "./components/ProjectGrid";
-import UiSection from "./components/UI Section";
-
-export default function WorksPage() {
-  const [activeFilter, setActiveFilter] = useState("all");
-
+const page = () => {
   return (
     <main>
-      <WorksHero
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
-      />
-
-      <ProjectGrid
-        activeFilter={activeFilter}
-      />
-
-      <UiSection />
+      <Hero />
+      <Services />
+      <Work />
+      <Projectvideo />
+      <Train />
+      <WhyUs />
+      <Founders />
+      <StartProject />
     </main>
   );
-}
+};
+
+export default page;

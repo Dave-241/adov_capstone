@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Gus Cooney",
     category: "website",
-    image: "/images/Gus Cooney.svg",
+    image: "/images/Gus Cooney.webp",
     url: "https://guscooney.com/",
   },
   {
@@ -62,18 +62,23 @@ export default function ProjectsGrid({ activeFilter }: ProjectsGridProps) {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
+  if (filteredProjects.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="w-full bg-white px-6 pb-12 md:px-8 md:pb-16">
-      <div className="mx-auto max-w-6xl  md:pt-10">
+    <section className="w-full  px-6 pb-12 md:px-12 md:pb-16">
+      <div className="mx-auto max-w-7xl md:pt-10">
         {/* Heading */}
         <FadeUp>
-          <h2 className="mb-2 text-[9px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
+          <h2 className="mb-3  text-2xl text-center md:text-left font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
+            {" "}
             Websites
           </h2>
         </FadeUp>
 
         {/* Grid */}
-        <div className="block mt-5 md:grid grid-cols-2 gap-x-3 gap-y-8 md:gap-x-5 md:gap-y-6">
+        <div className=" mt-5 grid md:grid-cols-2  gap-4 md:gap-x-5 md:gap-y-6">
           {filteredProjects.map((project, index) => (
             <FadeUp key={project.title} delay={index * 0.08}>
               <ProjectCard

@@ -1,30 +1,62 @@
-import Image from "next/image";
-import ui from "@/public/images/UIUX image.png";
-import FadeUp from "./FadeUp";
+"use client";
 
-export default function UISection() {
+import { useState } from "react";
+
+import FadeUp from "./FadeUp";
+import UICard from "./UICards";
+import Lightbox from "./Lightbox";
+import uiProjects from "./uiData";
+
+type UISectionProps = {
+  activeFilter: string;
+};
+
+type UIProject = (typeof uiProjects)[number];
+
+export default function UISection({ activeFilter }: UISectionProps) {
+  const [selectedProject, setSelectedProject] = useState<UIProject | null>(
+    null
+  );
+
+  const filteredProjects =
+    activeFilter === "all"
+      ? uiProjects
+      : uiProjects.filter((project) => project.category === activeFilter);
+
+  if (filteredProjects.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="w-full bg-white px-6 pt-16 pb-12  md:px-8 md:pt-0 md:pb-16">
-      <div className="mx-auto max-w-6xl">
+    <section className="w-full  px-6 md:pt-16 pb-12 md:px-8 md:pt-0 md:pb-16">
+      <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <FadeUp>
-          <h2 className="mb-4 text-[12px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-[18px]">
+          <h2 className="mb-3  text-2xl text-center md:text-left font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
             UI/UX
           </h2>
         </FadeUp>
 
-        {/* Image */}
+        {/* UI Cards */}
         <FadeUp delay={0.15}>
-          <div className="overflow-hidden rounded-2xl">
-            <Image
-              src={ui}
-              alt="UI/UX Project"
-              className="h-auto w-full"
-              priority
-            />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {filteredProjects.map((project) => (
+              <UICard
+                key={project.id}
+                project={project}
+                onClick={() => setSelectedProject(project)}
+              />
+            ))}
           </div>
         </FadeUp>
       </div>
+
+      {/* Lightbox */}
+      <Lightbox
+        open={selectedProject !== null}
+        images={selectedProject?.screens ?? []}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

@@ -7,10 +7,7 @@ type FadeUpProps = {
   delay?: number;
 };
 
-export default function FadeUp({
-  children,
-  delay = 0,
-}: FadeUpProps) {
+export default function FadeUp({ children, delay = 0 }: FadeUpProps) {
   return (
     <motion.div
       initial={{

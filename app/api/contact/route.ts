@@ -1,14 +1,14 @@
-import nodemailer from 'nodemailer';
-import { NextResponse } from 'next/server';
+import nodemailer from "nodemailer";
+import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
     const { fullName, email, helpWith, message } = await request.json();
-    console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'exists' : 'MISSING');
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "exists" : "MISSING");
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -31,6 +31,9 @@ console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'exists' : 'MISSING');
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ success: false, error: 'Failed to send' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Failed to send" },
+      { status: 500 },
+    );
   }
 }
