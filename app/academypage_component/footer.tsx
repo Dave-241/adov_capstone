@@ -11,10 +11,7 @@ const UnderlineLink = ({
   children: React.ReactNode;
   href: string;
 }) => (
-  <Link
-    href={href}
-    className="relative inline-block w-fit text-[#7B899A] cursor-pointer group"
-  >
+  <Link href={href} className="relative inline-block w-fit text-[#7B899A] cursor-pointer group">
     {children}
     <span className="absolute left-0 -bottom-0.5 h-[1px] w-full bg-[#7B899A] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
   </Link>
@@ -58,36 +55,63 @@ const footerLinkGroups: FooterLinkGroup[] = [
 
 const Footer = () => {
   return (
-    <div className="  md:px-12 px-4 mx-auto w-full">
-      <div className=" max-w-7xl   mx-auto w-full">
-        <div className=" flex md:flex-row flex-col     justify-between gap-8  mx-auto py-10 md:py-12 border-b  border-[#7B899A]">
-          <div className="flex w-full gap-3 items-start   flex-col">
-          
-              <Image
-                src={adovlogo}
-                alt="adovlogo"
-                className="h-8 w-auto md:h-auto scale-70   md:scale-100"
-              />
-         
-            <h1 className="text-[#7B899A] text-xs sm:text-base">
-              Creating experiences. Empowering growth.
-            </h1>
+    <div className=" max-w-7xl  px-6  md:px-12  mx-auto w-full">
+      <div className=" flex md:flex-row flex-col   md:justify-around gap-8  mx-auto py-10 md:py-12 border-b  border-[#7B899A]">
+        <div className="flex w-full gap-3   flex-col  md:col-span-1">
+          <div>
+            <Image
+              src={adovlogo}
+              alt="adovlogo"
+              className="h-8 w-auto md:h-auto scale-70  md:scale-100"
+            />
           </div>
-          <div className="  flex  gap-6 md:gap-24 md:flex-row flex-col     ">
-            {footerLinkGroups.map((group) => (
-              <div key={group.title} className="flex flex-col gap-1">
-                <h1 className="text-[#7B899A] font-semibold hover:text-gray-700 transition-colors text-sm sm:text-sm">
-                  {group.title}
-                </h1>
-                <div className="flex flex-col  gap-2 md:gap-1 text-xs sm:text-sm break-words">
-                  {group.links.map((link) => (
-                    <UnderlineLink key={link.href} href={link.href}>
-                      {link.label}
-                    </UnderlineLink>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <h1 className="text-[#7B899A] text-xs sm:text-base">
+            Creating experiences. Empowering growth.
+          </h1>
+        </div>
+        <div className=" gap-5 md:gap-0 grid md:grid-cols-3 ">
+          <div className="flex flex-col gap-2">
+            <Link
+              href={"/services"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
+              SERVICES
+            </Link>
+
+            <div className="flex flex-col gap-1 text-xs sm:text-base">
+              <UnderlineLink href="/works">Websites</UnderlineLink>
+              <UnderlineLink href="/works">UI/UX design</UnderlineLink>
+              <UnderlineLink href="/works">Branding</UnderlineLink>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Link
+              href={"/"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
+              COMPANY
+            </Link>
+            <div className="flex flex-col gap-1 text-xs sm:text-base">
+              <UnderlineLink href="/works">Works</UnderlineLink>
+
+              <UnderlineLink href="/academy">Academy</UnderlineLink>
+              <UnderlineLink href="/contact">Contact</UnderlineLink>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Link
+              href={"/contact"}
+              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
+            >
+              CONTACT
+            </Link>
+            <div className="flex flex-col gap-1 text-xs sm:text-base break-words">
+              <UnderlineLink href="mailto:contactadov@gmail.com">
+                contactadov@gmail.com
+              </UnderlineLink>
+            </div>
           </div>
         </div>
 
@@ -106,7 +130,11 @@ const Footer = () => {
             <h1 className="text-[#7B899A] text-sm sm:text-base">the_adov</h1>
           </Link>
         </div>
-      </div>{" "}
+        <Link href= "https://www.instagram.com/the_adov" className="flex gap-2 items-center">
+          <Image src={insta} alt="instagram" />
+          <h1 className="text-[#7B899A] text-sm sm:text-base">the_adov</h1>
+        </Link >
+      </div>
     </div>
   );
 };

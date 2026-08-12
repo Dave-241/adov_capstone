@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 
 type FadeUpProps = {
   children: React.ReactNode;
