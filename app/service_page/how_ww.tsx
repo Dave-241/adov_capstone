@@ -2,12 +2,8 @@ const HowWeWork = () => {
   return (
     <div className="w-full mt-20  md:mt-25">
       <div className="flex flex-col text-balance gap-2 md:text-start text-center w-full max-w-7xl mx-auto px-4">
-        <p className="font-medium  text-[14px] md:text-[16px] text-[#10A4EA] tracking-[1.6px]">
-          HOW WE WORK
-        </p>
-
-        <p className="font-medium text-[28px] md:text-[40px] text-[#031F4F] w-full max-w-[612px] leading-tight">
-          A Process Built Around Clarity and Collaboration.
+        <p className="font-medium text-2xl md:text-4xl text-[#031F4F] w-full max-w-[550px] leading-tight">
+          A Process Built Around Clarity and <br /> Collaboration.
         </p>
 
         <p className="font-medium text-balance text-[14px] md:text-[16px] text-[#7B899A]">

@@ -30,11 +30,11 @@ const processData = [
 
 const How_ww_boxes = () => {
   return (
-    <div className="mt-8 w-full  grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto  flex flex-col md:flex-row gap-[12px]">
+    <div className="mt-8 w-full grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto flex flex-col md:flex-row gap-[12px]">
       {processData.map((step) => (
         <div
           key={step.id}
-          className="border  rounded-3xl px-6 md:px-[41px] pt-[28px] md:pt-[36px] pb-[36px] md:pb-[60px] flex flex-col gap-[8px] bg-[#FFFFFF] w-full md:w-auto"
+          className="border border-gray-300 hover:border-[#031F4F] hover:-translate-y-2 transition-all transition-colors duration-300 rounded-3xl px-6 md:px-[41px] pt-[28px] md:pt-[36px] pb-[36px] md:pb-[60px] flex flex-col gap-[8px] bg-[#FFFFF0] w-full md:w-auto"
         >
           <p className="font-semibold text-[#10A4EA] text-3xl md:text-[20px]">
             {step.number}

@@ -1,22 +1,14 @@
-import Image from "next/image";
-import b11 from "@/public/b11.png";
-import b2 from "@/public/b2.png";
-import b3 from "@/public/b3.png";
-import b4 from "@/public/b4.png";
-import b5 from "@/public/b5.png";
 
-const branding_images = () => {
-  return (
-    <div>
-      <div className="grid grid-cols-2 md:grid-cols-5 w-full max-w-7xl mx-auto gap-[3px] mt-2 ">
-        <Image src={b11} alt="b11" className=" " />
-        <Image src={b2} alt="b2" className=" " />
-        <Image src={b3} alt="b3" className=" " />
-        <Image src={b4} alt="b4" className=" " />
-        <Image src={b5} alt="b5" className=" " />
-      </div>
-    </div>
-  );
+import b1 from "@/public/b1.webp";
+import b2 from "@/public/b2.webp";
+import b3 from "@/public/b3.webp";
+import b4 from "@/public/b4.webp";
+import b5 from "@/public/b5.webp";
+import b6 from "@/public/b6.webp";
+import ImageCarousel from "./ImageCarousel";
+
+const BrandingImages = () => {
+  return <ImageCarousel images={[b1, b2, b3, b4, b5, b6]} />;
 };
 
-export default branding_images;
+export default BrandingImages;

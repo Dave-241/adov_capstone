@@ -1,20 +1,15 @@
-import Image from "next/image";
-import { StaticImageData } from "next/image";
+
 
 type Props = {
-  image: StaticImageData;
   title: string;
-  subtext: string;
 };
 
-const SectionTitle = ({ image, title, subtext }: Props) => {
+const SectionTitle = ({ title }: Props) => {
   return (
-    <div className="w-full max-w-7xl mx-auto  md:mb-0 mb-3 mt-15 md:mt-20 gap-3">
-      <Image src={image} alt={title} className="w-12 h-12 mb-2" />
-      <p className="font-semibold text-[#031F4F] text-balance text-lg md:text-2xl">
+    <div className="w-full max-w-7xl flex justify-center md:justify-start mx-auto pb-4  md:mb-6 mt-15 md:mt-20 gap-3">
+      <p className="font-medium text-[#031F4F] text-balance text-[22px] md:text-4xl">
         {title}
       </p>
-      <p className="font-medium text-sm md:text-base text-[#7B899A]">{subtext}</p>
     </div>
   );
 };

@@ -4,10 +4,13 @@ import Uiux_images from "@/app/service_page/uiux_images";
 import Branding_images from "@/app/service_page/branding_images";
 import How_ww from "@/app/service_page/how_ww";
 import How_ww_boxes from "@/app/service_page/how_ww_boxes";
+import Startp from "@/app/service_page/startp";
+import Web_button from "@/app/service_page/web_button";
+import Uiux_button from "@/app/service_page/uiux_button";
+import Branding_button from "@/app/service_page/branding_button";
+import Faq from "@/app/service_page/faq";
 
-import wimage from "@/public/wimage.png";
-import uiux_image from "@/public/uiux_image.png";
-import bimage from "@/public/bimage.png";
+
 import SectionTitle from "./section_title";
 import StartProject from "../startproject";
 
@@ -20,33 +23,32 @@ const page = () => {
       <Whatwedo />
 
       <SectionTitle
-        image={wimage}
-        title="Websites That Perform Beyond Expectations."
-        subtext="Innovative technology. Real business impact."
+        title="Website Design & Development"
       />
       <Web_images />
+      <Web_button/>
 
       <SectionTitle
-        image={uiux_image}
         title="UI/UX"
-        subtext="Creating user experiences that simplify, engage and inspire."
       />
       <Uiux_images />
+      <Uiux_button/>
 
       <SectionTitle
-        image={bimage}
         title="Branding"
-        subtext="Building brands that inspire trust and lasting connection."
       />
       <Branding_images />
+      <Branding_button/>
 
       <How_ww />
       <How_ww_boxes />
 
  
     </div>
-               <StartProject />
-                 </>
+          <Startp/>  
+          <Faq/>                 </>
+
+      
   );
 };
 

@@ -42,7 +42,7 @@ const Details = () => {
 
   return (
     <div>
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-0 flex flex-col lg:flex-row mb-8 justify-center gap-6 md:gap-0">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-0 flex flex-col lg:flex-row  justify-center gap-6 md:gap-0">
         <form
           onSubmit={handleSubmit}
           className="bg-[#FFFFFF] flex text-black flex-col gap-6 md:gap-9 py-8 md:py-19 px-6 md:px-8 rounded-3xl border w-full md:w-auto"
@@ -153,7 +153,7 @@ const Details = () => {
               <p className="text-[12px] font-semibold text-[#7B899A]">
                 Instagram
               </p>
-              <p className="text-[12px] font-bold text-white">the_adov</p>
+              <p className="text-[12px] font-bold text-white">adov.official</p>
             </div>
           </a>
         </div>
