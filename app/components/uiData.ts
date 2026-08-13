@@ -25,6 +25,15 @@ const uiProjects = [
 
     screens: ["/images/ui/kept-full.png"],
   },
+  {
+    id: 4,
+    title: "Bareframe",
+    cover: "/images/ui/bareframe.webp",
+
+    screens: [
+      "/images/ui/kept-full.png",
+    ],
+  },
 ];
 
 export default uiProjects;

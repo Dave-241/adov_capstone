@@ -30,7 +30,7 @@ export default function UICard({ project, onClick }: Props) {
         />
       </div>
 
-      <h3 className="mt-2  font-semibold text-black text-2xl md:text-2xl">
+      <h3 className="mt-3 text-base font-semibold text-black md:text-3xl">
         {project.title}
       </h3>
     </button>

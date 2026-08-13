@@ -8,25 +8,19 @@ export default function WorksHero({
   setActiveFilter,
 }: WorksHeroProps) {
   return (
-    <section className="w-full px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
+    <section className="w-full bg-[#ffffff] px-6 pt-14 pb-10 md:px-8 md:pt-16 md:pb-12">
       <div className="mx-auto flex max-w-3xl gap-3 md:gap-3 flex-col items-center text-center">
-        {/* Small heading */}
-        <p className=" text-sm font-medium uppercase tracking-[0.08em] text-[#41b7d6] md:text-sm">
-          Our Work
-        </p>
-
+      
         {/* Main heading */}
-        <h1 className="text-3xl font-semibold  tracking-[-0.04em] text-[#06265f] md:text-3xl lg:text-[40px]">
-          Proof, not promises.
-        </h1>
+    <h1 className="text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-[#06265f] md:text-6xl lg:text-6xl">
+      Websites, Design & Branding We're Proud Of
+    </h1>
 
         {/* Description */}
-        <p className=" text-base text-[#6d6d6d] md:max-w-sm text-balance  md:text-base">
-          A collection of websites, UI/UX and branding projects we&apos;ve
-          completed for clients across industries.
+        <p className=" text-base text-[#6d6d6d] md:max-w-sm  md:text-base tracking-wider">
+          Every project reflects the care and skill we bring to our work. Explore our websites, UI/UX, and branding projects.
         </p>
 
-        {/* Category buttons */}
         {/* Category buttons */}
         <div className="mt-2 flex items-center justify-center gap-2">
           {[

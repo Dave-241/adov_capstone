@@ -1,0 +1,19 @@
+[33mcommit 89ecf999d3c86dce1e28cb12f0e8092c517ef4bf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 505e228 0ee9941
+Author: IFE19 <113481620+IFE19@users.noreply.github.com>
+Date:   Mon Aug 10 01:58:46 2026 +0100
+
+    Merge branch 'wisdom_workspage'
+
+ app/Icon.svg                               |  18 [31m------------[m
+ app/components/UI Section.tsx              |   4 [32m+[m[31m--[m
+ app/components/{UICard.tsx => UICards.tsx} |   9 [32m+++[m[31m---[m
+ app/components/WorksCTA.tsx                |  44 [32m+++++++++++++++++++++++++++++[m
+ app/components/uiData.ts                   |  13 [32m+++++++[m[31m--[m
+ app/favicon.ico                            | Bin [31m25931[m -> [32m0[m bytes
+ app/works/page.tsx                         |   5 [32m++[m[31m--[m
+ public/images/ui/Frame (3).png             | Bin [31m0[m -> [32m1247832[m bytes
+ public/images/ui/finora-cover.webp         | Bin [31m18704[m -> [32m35954[m bytes
+ public/images/ui/finora-full.webp          | Bin [31m291334[m -> [32m630785[m bytes
+ public/images/ui/kept-cover.png            | Bin [31m0[m -> [32m507063[m bytes
+ 11 files changed, 64 insertions(+), 29 deletions(-)
