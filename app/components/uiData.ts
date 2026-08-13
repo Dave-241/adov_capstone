@@ -28,6 +28,7 @@ const uiProjects = [
   {
     id: 4,
     title: "Bareframe",
+    category: "uiux",
     cover: "/images/ui/bareframe.webp",
 
     screens: [

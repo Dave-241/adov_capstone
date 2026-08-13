@@ -5,7 +5,8 @@ import { useState } from "react";
 import WorksHero from "../components/workshero";
 import ProjectGrid from "../components/ProjectGrid";
 import WorksCTA from "../components/WorksCTA";
-// import Faq from "../components/Faq";
+import UISection from "../components/UI Section";
+import StartProject from "../startproject";
 
 export default function WorksPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -16,9 +17,13 @@ export default function WorksPage() {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
+
       <ProjectGrid activeFilter={activeFilter} />
+
       <UISection activeFilter={activeFilter} />
-      <StartProject />
+
+      <WorksCTA />
+
     </main>
   );
 }
