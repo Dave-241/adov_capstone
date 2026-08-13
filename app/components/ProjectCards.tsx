@@ -35,12 +35,6 @@ export default function ProjectCard({
           />
         </div>
 
-<<<<<<< Updated upstream
-        {/* Project title */}
-        <h3 className="mt-2 text-base font-semibold text-black md:text-2xl">
-          {title}
-        </h3>
-=======
         {/* Project information */}
         <div className="px-3 pb-4 pt-3 md:px-4 md:pb-5 md:pt-4">
 
@@ -60,7 +54,6 @@ export default function ProjectCard({
           </p>
 
         </div>
->>>>>>> Stashed changes
       </article>
     </Link>
   );
