@@ -5,8 +5,7 @@ import { useState } from "react";
 import WorksHero from "../components/workshero";
 import ProjectGrid from "../components/ProjectGrid";
 import WorksCTA from "../components/WorksCTA";
-import StartProject from "../startproject";
-import UISection from "../components/UI Section";
+// import Faq from "../components/Faq";
 
 export default function WorksPage() {
   const [activeFilter, setActiveFilter] = useState("all");

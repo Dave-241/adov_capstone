@@ -32,8 +32,8 @@ export default function UISection({ activeFilter }: UISectionProps) {
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <FadeUp>
-          <h2 className="mb-3  text-2xl text-center md:text-left font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
-            UI/UX
+          <h2 className="mb-4 text-2xl font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-2xl ">
+            Design Projects
           </h2>
         </FadeUp>
 
