@@ -17,8 +17,8 @@ export default function UISection() {
 
         {/* Section Heading */}
         <FadeUp>
-          <h2 className="mb-4 text-[9px] font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-[21px] ">
-            UI/UX
+          <h2 className="mb-4 text-2xl font-bold uppercase tracking-[0.05em] text-[#06265f] md:text-2xl ">
+            Design Projects
           </h2>
         </FadeUp>
 

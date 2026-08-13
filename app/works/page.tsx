@@ -6,6 +6,7 @@ import WorksHero from "../components/workshero";
 import ProjectGrid from "../components/ProjectGrid";
 import UiSection from "../components/UI Section";
 import WorksCTA from "../components/WorksCTA";
+// import Faq from "../components/Faq";
 
 export default function WorksPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -21,6 +22,7 @@ export default function WorksPage() {
 
       <UiSection />
       <WorksCTA />
+      {/* <Faq /> */}
     </main>
   );
 }
