@@ -7,16 +7,20 @@ import Section5Array from "@/app/academypage_component/section4";
 import Section6 from "@/app/academypage_component/section6";
 import Footer from "@/app/academypage_component/footer";
 import StartProject from "../startproject";
+import Faq from "@/app/academypage_component/faq"
 const Academypage = () => {
   return (
-    <div className=" bg-[#FFFFF0] font-inter">
+    <div className=" bg-[#FFFFF0] ">
       <Section />
-      <Section2 />
 
       <Section5Array />
+      <Section2 />
+
+      
 
       <Section6 />
       <StartProject />
+     <Faq/>
     </div>
   );
 };

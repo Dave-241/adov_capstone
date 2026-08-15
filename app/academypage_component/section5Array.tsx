@@ -1,36 +1,35 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Layout, Braces, Palette, PenTool } from "lucide-react";
+import Image from "next/image";
+import frontend from "@/public/frontend.webp";
+import backend from "@/public/backend.webp";
+import branding from "@/public/pexels-zayed-hossain-52728970-36747234 1.webp";
+import ui from "@/public/pexels-micahways-10498800 1.webp";
 
 const disciplines = [
   {
-    icon: Layout,
-    title: "Frontend development",
+    title: "Frontend Development",
     description:
-      "Building responsive, accessible interfaces from real designs.",
-    bg: "bg-[#FBEFC7]",
-    iconBg: "bg-[#BBCED7]",
+      "Build the parts of a website that users see and interact with, using modern tools like HTML, CSS, Tailwind, and JavaScript.",
+
+    image: { frontend },
   },
   {
-    icon: Braces,
-    title: "Backend development",
-    description: "Authentication, databases and working application logic.",
-    bg: "bg-[#E5F2D9]",
-    iconBg: "bg-[#BBCED7]",
+    title: "Backend Development",
+    description:
+      "Power the systems, logic, and data that make websites and apps work.",
+    image: { backend },
   },
   {
-    icon: Palette,
-    title: "UI/UX design",
-    description: "Research, wireframing and high-fidelity interface design.",
-    bg: "bg-white",
-    iconBg: "bg-[#BBCED7]",
+    title: "UI/UX Design",
+    description:
+      "Design simple, beautiful, and effective digital experiences using tools like Figma.",
+    image: { ui },
   },
   {
-    icon: PenTool,
     title: "Branding",
-    description: "Identity systems that hold up across every touchpoint.",
-    bg: "bg-[#F6EAF5]",
-    iconBg: "bg-[#BBCED7]",
+    description: "Create visual identities that businesses are proud to wear.",
+    image: { branding },
   },
 ];
 
@@ -49,7 +48,7 @@ const Section3 = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(el);
@@ -57,32 +56,37 @@ const Section3 = () => {
   }, []);
 
   return (
-    <div className="bg-[#FFFFF0]">
+    <div className="bg-[#FFFFF0] py-16 ">
       <div
         ref={containerRef}
+<<<<<<< Updated upstream
         className="grid grid-cols-1 text-left sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
+=======
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto"
+>>>>>>> Stashed changes
       >
-        {disciplines.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={item.title}
-              className={`${
-                item.bg
-              } rounded-2xl p-6 border border-black/5 hover:shadow-2xl transition-all duration-700 ease-out ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
-              }}
-            >
-              <div
-                className={`${item.iconBg} w-9 h-9 rounded-lg flex items-center justify-center mb-6`}
-              >
-                <Icon className="w-4 h-4 text-black" strokeWidth={2} />
-              </div>
+        {disciplines.map((item, index) => (
+          <div
+            key={item.title}
+            className={`bg-white rounded-4xl border border-black/5 shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-700 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{
+              transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
+            }}
+          >
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+            <div className="p-5">
               <h3 className="text-[16px] font-semibold text-[#031F4F] mb-2">
                 {item.title}
               </h3>
@@ -90,8 +94,8 @@ const Section3 = () => {
                 {item.description}
               </p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

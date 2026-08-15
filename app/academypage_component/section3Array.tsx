@@ -1,32 +1,27 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
+import { MapPin, ListChecks, Users, Award } from "lucide-react";
 
-const programWeeks = [
+const features = [
   {
-    week: "WEEK 1",
-    title: "Foundations",
-    description: "Foundations & Digital Mindset",
+    icon: MapPin,
+    text: "Onsite and hands-on, you learn in a focused, supportive, in-person environment.",
   },
   {
-    week: "WEEK 2",
-    title: "Core Skills",
-    description: "Core Skills & Practical Learning",
-  },
-  { week: "WEEK 3", title: "Projects", description: "Collaborative Projects" },
-  {
-    week: "WEEK 4",
-    title: "Advanced Topics",
-    description: "Advanced Topics & Specialization",
+    icon: ListChecks,
+    text: "Project-based, you finish the program with a real project in your portfolio.",
   },
   {
-    week: "WEEK 5",
-    title: "Capstone",
-    description: "Capstone Project & Portfolio Presentation",
+    icon: Users,
+    text: "Community-driven, you grow alongside a cohort of people who push you forward.",
+  },
+  {
+    icon: Award,
+    text: "Built for outcomes, our top-performing trainees are considered for real job opportunities.",
   },
 ];
 
-const Section3Array = () => {
+const FeatureBadges = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,7 +36,7 @@ const Section3Array = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(el);
@@ -49,9 +44,10 @@ const Section3Array = () => {
   }, []);
 
   return (
-    <div className=" ">
+    <div className="bg-[#FFFFF0] py-10 ">
       <div
         ref={containerRef}
+<<<<<<< Updated upstream
         className="grid  md:mt-0 mt-2
          text-left grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3  mx-auto "
       >
@@ -76,9 +72,36 @@ const Section3Array = () => {
             </p>
           </div>
         ))}
+=======
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mx-auto"
+      >
+        {features.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={item.text}
+              className={`bg-white rounded-4xl  border-black/5 shadow-sm p-4 flex flex-col gap-2 transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
+              }}
+            >
+              <div className="w-7 h-7 rounded-full bg-[#F3EEDD] flex items-center justify-center">
+                <Icon className="w-3.5 h-3.5 text-[#031F4F]" strokeWidth={2} />
+              </div>
+              <p className="text-[12px] text-[#7B899A] leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          );
+        })}
+>>>>>>> Stashed changes
       </div>
     </div>
   );
 };
 
-export default Section3Array;
+export default FeatureBadges;
