@@ -1,35 +1,41 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import frontend from "@/public/frontend.webp";
 import backend from "@/public/backend.webp";
 import branding from "@/public/pexels-zayed-hossain-52728970-36747234 1.webp";
 import ui from "@/public/pexels-micahways-10498800 1.webp";
 
-const disciplines = [
+interface Discipline {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
+const disciplines: Discipline[] = [
   {
     title: "Frontend Development",
     description:
       "Build the parts of a website that users see and interact with, using modern tools like HTML, CSS, Tailwind, and JavaScript.",
-
-    image: { frontend },
+    image: frontend,
   },
   {
     title: "Backend Development",
     description:
       "Power the systems, logic, and data that make websites and apps work.",
-    image: { backend },
+    image: backend,
   },
   {
     title: "UI/UX Design",
     description:
       "Design simple, beautiful, and effective digital experiences using tools like Figma.",
-    image: { ui },
+    image: ui,
   },
   {
     title: "Branding",
     description: "Create visual identities that businesses are proud to wear.",
-    image: { branding },
+    image: branding,
   },
 ];
 
@@ -59,11 +65,7 @@ const Section3 = () => {
     <div className="bg-[#FFFFF0] py-16 ">
       <div
         ref={containerRef}
-<<<<<<< Updated upstream
-        className="grid grid-cols-1 text-left sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
-=======
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto"
->>>>>>> Stashed changes
       >
         {disciplines.map((item, index) => (
           <div

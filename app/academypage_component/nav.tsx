@@ -5,9 +5,11 @@ import Image from "next/image";
 import adovlogo from "@/public/adovlogo.svg";
 import { PenLine, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
     { label: "Home", href: "/" },
@@ -15,6 +17,17 @@ const Nav = () => {
     { label: "Works", href: "works" },
     { label: "Academy", href: "academy" },
   ];
+
+  const isActive = (href: string) => {
+    // normalize href to always start with "/"
+    const normalizedHref = href.startsWith("/") ? href : `/${href}`;
+
+    if (normalizedHref === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === normalizedHref || pathname.startsWith(`${normalizedHref}/`);
+  };
 
   return (
     <nav className="  font-semibold sticky px-6 sm:px-8 lg:px-12 top-0 z-99999999999 bg-[#FFFFF0] shadow-md  border-[#7B899A]">
@@ -30,7 +43,11 @@ const Nav = () => {
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="hover:text-gray-600 transition-colors text-[#7B899A] absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+                className={`hover:text-gray-600 transition-colors absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 ${
+                  isActive(link.href)
+                    ? "text-[#031F4F] font-bold"
+                    : "text-[#7B899A]"
+                }`}
               >
                 {link.label}
               </Link>
@@ -38,17 +55,20 @@ const Nav = () => {
           ))}
         </ul>
 
+        {/* Desktop contact button - hidden below lg */}
         <Link
           href={"/contact"}
-          className="hidden lg:flex border border-[#031F4F] text-[#031F4F] hover:bg-gray-100 dark:border-[#031F4F] dark:text-[#031F4F] dark:hover:bg-gray-100 dark:bg-transparent font-bold py-2 px-4 rounded-xl gap-1 items-center"
+          className={`hidden lg:flex border hover:bg-gray-100 font-bold py-2 px-4 rounded-xl gap-1 items-center ${
+            isActive("/contact") ? "bg-gray-100 text-black" : ""
+          }`}
         >
           <span>Contact us</span>
           <PenLine className="scale-75" />
         </Link>
 
-        {/* Mobile / tablet menu toggle */}
+        {/* Mobile / tablet menu toggle - shown below lg */}
         <button
-          className="lg:hidden p-2 border border-[#031F4F] text-[#031F4F] dark:border-[#031F4F] dark:text-[#031F4F] dark:bg-transparent rounded-lg"
+          className="lg:hidden p-2 border rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -56,14 +76,27 @@ const Nav = () => {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="lg:hidden   pb-4">
+      {/* Mobile / tablet dropdown */}
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div
+          className={`px-6 sm:px-8 pb-4 transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-y-0" : "-translate-y-4"
+          }`}
+        >
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="block text-lg text-[#7B899A] hover:text-gray-600 dark:text-[#7B899A] dark:hover:text-gray-600 transition-colors"
+                  className={`block hover:text-gray-600 transition-colors ${
+                    isActive(link.href)
+                      ? "text-[#031F4F] font-bold"
+                      : "text-[#7B899A]"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -74,14 +107,16 @@ const Nav = () => {
 
           <Link
             href={"/contact"}
+            className={`mt-4 w-full border hover:bg-gray-100 font-bold py-2 px-4 rounded-xl flex gap-1 items-center justify-center ${
+              isActive("/contact") ? "bg-gray-100 text-black" : ""
+            }`}
             onClick={() => setIsOpen(false)}
-            className="mt-4 w-full border border-[#031F4F] text-[#031F4F] dark:border-[#031F4F] dark:text-[#031F4F] dark:bg-transparent dark:hover:bg-gray-100 hover:bg-gray-100 font-bold py-4 px-4 rounded-xl flex gap-1 items-center justify-center"
           >
             <span>Contact us</span>
             <PenLine className="scale-75" />
           </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

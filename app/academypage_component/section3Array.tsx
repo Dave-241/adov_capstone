@@ -47,32 +47,6 @@ const FeatureBadges = () => {
     <div className="bg-[#FFFFF0] py-10 ">
       <div
         ref={containerRef}
-<<<<<<< Updated upstream
-        className="grid  md:mt-0 mt-2
-         text-left grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3  mx-auto "
-      >
-        {programWeeks.map((item, index) => (
-          <div
-            key={item.week}
-            className={`border md:aspect-[1/0.5]  bg-white p-4 rounded-2xl transition-all duration-700 ease-out ${
-              isVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-8"
-            }`}
-            style={{ transitionDelay: isVisible ? `${index * 120}ms` : "0ms" }}
-          >
-            <p className="font-medium text-lg md:text-xl text-[#10A4EA]">
-              {item.week}
-            </p>
-            <h3 className="text-base  font-semibold text-[#031F4F]">
-              {item.title}
-            </h3>
-            <p className="text-[#7B899A] font-medium text-sm ] max-w-md">
-              {item.description}
-            </p>
-          </div>
-        ))}
-=======
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mx-auto"
       >
         {features.map((item, index) => {
@@ -98,7 +72,6 @@ const FeatureBadges = () => {
             </div>
           );
         })}
->>>>>>> Stashed changes
       </div>
     </div>
   );

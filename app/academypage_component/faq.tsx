@@ -33,7 +33,7 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="bg-[#FFFFF0]   mt-4 p-12 ">
+    <div className="bg-[#FFFFF0]   mt-4 md:p-12  px-3 ">
       <div className="max-w-7xl mx-auto ">
         {/* Header */}
         <div className="flex flex-col items-start mb-4">

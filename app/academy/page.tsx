@@ -6,7 +6,7 @@ import Section4 from "@/app/academypage_component/section5Array";
 import Section5Array from "@/app/academypage_component/section4";
 import Section6 from "@/app/academypage_component/section6";
 import Footer from "@/app/academypage_component/footer";
-import StartProject from "../startproject";
+import StartProject from "@/app/academypage_component/startprojectacademy";
 import Faq from "@/app/academypage_component/faq"
 const Academypage = () => {
   return (

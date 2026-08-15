@@ -11,7 +11,10 @@ const UnderlineLink = ({
   children: React.ReactNode;
   href: string;
 }) => (
-  <Link href={href} className="relative inline-block w-fit text-[#7B899A] cursor-pointer group">
+  <Link
+    href={href}
+    className="relative inline-block w-fit text-[#7B899A] cursor-pointer group"
+  >
     {children}
     <span className="absolute left-0 -bottom-0.5 h-[1px] w-full bg-[#7B899A] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
   </Link>
@@ -40,24 +43,23 @@ const footerLinkGroups: FooterLinkGroup[] = [
     title: "COMPANY",
     links: [
       { label: "Home", href: "/" },
-    { label: "Services", href: "services" },
-    { label: "Works", href: "works" },
-    { label: "Academy", href: "academy" },
+      { label: "Services", href: "services" },
+      { label: "Works", href: "works" },
+      { label: "Academy", href: "academy" },
     ],
   },
   {
     title: "CONTACT",
-    links: [
-      { label: "Contact Us", href: "mailto:contactadov@gmail.com" },
-    ],
+    links: [{ label: "Contact Us", href: "mailto:contactadov@gmail.com" }],
   },
 ];
 
 const Footer = () => {
   return (
-    <div className=" max-w-7xl  px-6  md:px-12  mx-auto w-full">
-      <div className=" flex md:flex-row flex-col   md:justify-around gap-8  mx-auto py-10 md:py-12 border-b  border-[#7B899A]">
-        <div className="flex w-full gap-3   flex-col  md:col-span-1">
+    <div className="   px-3  md:px-12  mx-auto w-full">
+      {/* <div className="flex  flex-col"> */}
+      <div className=" flex md:flex-row flex-col   md:justify-between gap-8  mx-auto py-10 md:py-12 border-b border-[#7B899A]   -[#7B899A] ">
+        <div className="flex w-full gap-3   flex-col  md:col-span-1 ">
           <div>
             <Image
               src={adovlogo}
@@ -69,7 +71,7 @@ const Footer = () => {
             Creating experiences. Empowering growth.
           </h1>
         </div>
-        <div className=" gap-5 md:gap-0 grid md:grid-cols-3 ">
+        <div className=" gap-5 grid  md:grid-cols-3 ">
           <div className="flex flex-col gap-2">
             <Link
               href={"/services"}
@@ -79,7 +81,7 @@ const Footer = () => {
             </Link>
 
             <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <UnderlineLink href="/works">Websites</UnderlineLink>
+              <UnderlineLink href="/works/websites">Websites</UnderlineLink>
               <UnderlineLink href="/works">UI/UX design</UnderlineLink>
               <UnderlineLink href="/works">Branding</UnderlineLink>
             </div>
@@ -109,33 +111,34 @@ const Footer = () => {
             </Link>
             <div className="flex flex-col gap-1 text-xs sm:text-base break-words">
               <UnderlineLink href="mailto:contactadov@gmail.com">
-                contactadov@gmail.com
+                contact us
               </UnderlineLink>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-row  justify-between items-center gap-3 sm:gap-2 mx-auto  bg-[#FFFFF0] text-[#7B899A]  py-4 sm:py-4">
-          <div className="flex gap-2 items-center">
-            <Image src={footerlogo} alt="footerlogo" />
-            <h1 className="text-sm sm:text-base">2026 Adov.</h1>
-          </div>
+      <div className="  flex justify-between m-3 ">
+        <div className="flex gap-2 items-center ">
+          <Image src={footerlogo} alt="footerlogo" />
+          <h1 className="text-sm text-[#7B899A] sm:text-base">2026 Adov.</h1>
+        </div>
+        <div className="">
           <Link
-            href="https://www.instagram.com/the_adov"
+            href="https://www.instagram.com/adov.official"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex gap-2 items-center hover:opacity-70 transition-opacity"
+            className="flex gap- items-center hover:opacity-70 transition-opacity"
           >
             <Image src={insta} alt="instagram" />
-            <h1 className="text-[#7B899A] text-sm sm:text-base">the_adov</h1>
+            <h1 className="text-[#7B899A] text-sm sm:text-base">
+              adov.official
+            </h1>
           </Link>
         </div>
-        <Link href= "https://www.instagram.com/the_adov" className="flex gap-2 items-center">
-          <Image src={insta} alt="instagram" />
-          <h1 className="text-[#7B899A] text-sm sm:text-base">the_adov</h1>
-        </Link >
       </div>
     </div>
+    // </div>
   );
 };
 
