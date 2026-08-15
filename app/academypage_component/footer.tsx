@@ -71,22 +71,7 @@ const Footer = () => {
             Creating experiences. Empowering growth.
           </h1>
         </div>
-        <div className=" gap-5 grid  md:grid-cols-3 ">
-          <div className="flex flex-col gap-2">
-            <Link
-              href={"/services"}
-              className="text-[#7B899A] font-bold hover:text-gray-700 transition-colors text-sm sm:text-base"
-            >
-              SERVICES
-            </Link>
-
-            <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <UnderlineLink href="/works/websites">Websites</UnderlineLink>
-              <UnderlineLink href="/works">UI/UX design</UnderlineLink>
-              <UnderlineLink href="/works">Branding</UnderlineLink>
-            </div>
-          </div>
-
+        <div className=" gap-5 grid  md:grid-cols-2 ">
           <div className="flex flex-col gap-2">
             <Link
               href={"/"}
