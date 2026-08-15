@@ -70,7 +70,7 @@ const Section3 = () => {
         {disciplines.map((item, index) => (
           <div
             key={item.title}
-            className={`bg-white rounded-4xl border border-black/5 shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-700 ease-out ${
+            className={`bg-white rounded-4xl border border-black/5 shadow-sm overflow-hidden  transition-all duration-700 ease-out ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
