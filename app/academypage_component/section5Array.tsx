@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 import frontend from "@/public/frontend.webp";
 import backend from "@/public/backend.webp";
-import branding from "@/public/pexels-zayed-hossain-52728970-36747234 1.webp";
-import ui from "@/public/pexels-micahways-10498800 1.webp";
+import branding from "@/public/branding.webp";
+import ui from "@/public/ui.webp";
 
 interface Discipline {
   title: string;
@@ -62,10 +62,10 @@ const Section3 = () => {
   }, []);
 
   return (
-    <div className="bg-[#FFFFF0] py-16 ">
+    <div className="bg-[#FFFFF0]">
       <div
         ref={containerRef}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2  gap-2 mx-auto"
       >
         {disciplines.map((item, index) => (
           <div

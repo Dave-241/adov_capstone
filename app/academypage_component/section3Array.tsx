@@ -44,7 +44,7 @@ const FeatureBadges = () => {
   }, []);
 
   return (
-    <div className="bg-[#FFFFF0] py-10 ">
+    <div className="bg-[#FFFFF0]">
       <div
         ref={containerRef}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mx-auto"
