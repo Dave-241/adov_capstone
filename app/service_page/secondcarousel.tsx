@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useRef, useState, useEffect } from "react";
@@ -34,7 +33,7 @@ const ImageCarousel = ({ images }: ImageCarouselProps) => {
     >
       <motion.div
         className="flex gap-[16px]"
-        animate={isInView ? { x: ["0%", "-70%"] } : {}}
+        animate={isInView ? { x: ["-70%", "0%"] } : {}}
         transition={{
           duration,
           repeat: Infinity,
