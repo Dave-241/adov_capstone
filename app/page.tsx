@@ -12,7 +12,7 @@ const page = () => {
   return (
     <main className="bg-[#fdfbe9]">
       <Hero />
-      {/* <LogoZoom /> */}
+
       <Services />
       <Work />
       <Projectvideo />
