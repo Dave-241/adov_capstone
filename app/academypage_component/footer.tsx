@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import adovlogo from "@/public/adovlogo.svg";
-import footerlogo from "@/public/Vector (1).svg";
+import footerlogo from "@/public/Vector.svg";
 import insta from "@/public/Group.svg";
 
 const UnderlineLink = ({
