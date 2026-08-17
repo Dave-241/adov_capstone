@@ -1,16 +1,38 @@
 import FadeUp from "./FadeUp";
 import ProjectCard from "./ProjectCards";
 
+// Static image imports
+import GowHastings from "@/public/images/gow.jpg";
+import GusCooney from "@/public/images/gus.webp";
+import ThirstyBastard from "@/public/images/thirsty.jpeg";
+import Erica from "@/public/images/erica.webp";
+import Brala from "@/public/images/brala.webp";
+import PawpWater from "@/public/images/pawp.webp";
+import Anzza from "@/public/images/anzaa.webp";
+import Hovn from "@/public/images/HOVN.jpg";
+import Midtown from "@/public/images/midtown.webp";
+
+import { StaticImageData } from "next/image";
+
 type ProjectsGridProps = {
   activeFilter: string;
 };
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  type: string;
+  image: StaticImageData;
+  url: string;
+  description: string;
+};
+
+const projects: Project[] = [
   {
     title: "Gow Hastings",
     category: "ARCHITECTURE · DESIGN STUDIO",
     type: "website",
-    image: "/images/Gow Hastings.svg",
+    image: GowHastings,
     url: "https://gowhastings.com",
     description:
       "A portfolio-driven website for a Toronto architecture and interior design studio, showcasing its educational, institutional and public projects.",
@@ -19,7 +41,7 @@ const projects = [
     title: "Gus Cooney",
     category: "PERSONAL BRAND · ACADEMIA",
     type: "website",
-    image: "/images/Gus Cooney.webp",
+    image: GusCooney,
     url: "https://guscooney.com/",
     description:
       "A personal academic website presenting Gus Cooney's research, publications, teaching and consulting work in social psychology, conversation and negotiation.",
@@ -28,7 +50,7 @@ const projects = [
     title: "Thirsty Bast****s",
     category: "E-COMMERCE · CONSUMER BRAND",
     type: "website",
-    image: "/images/thirsty_bastard 1.svg",
+    image: ThirstyBastard,
     url: "https://www.thirstybastardwater.com/",
     description:
       "A bold e-commerce experience for a premium water brand, combining strong visual branding, product storytelling and a direct-to-consumer shopping journey.",
@@ -37,7 +59,7 @@ const projects = [
     title: "Erica Boothby",
     category: "PERSONAL BRAND · ACADEMIA",
     type: "website",
-    image: "/images/Erica.svg",
+    image: Erica,
     url: "https://www.ericaboothby.com/",
     description:
       "A personal brand website for psychologist and researcher Erica Boothby, bringing together her research, speaking, teaching, workshops and consulting work.",
@@ -46,7 +68,7 @@ const projects = [
     title: "Brala's Best",
     category: "E-COMMERCE · FOOD & BEVERAGE",
     type: "website",
-    image: "/images/brala 1.svg",
+    image: Brala,
     url: "https://www.bralasbest.com/",
     description:
       "A vibrant e-commerce experience for a family-owned garlic spread brand, combining product discovery, storytelling, recipes and a streamlined shopping experience.",
@@ -55,7 +77,7 @@ const projects = [
     title: "Pawp Water",
     category: "E-COMMERCE · PET WELLNESS",
     type: "website",
-    image: "/images/Pawp Water.svg",
+    image: PawpWater,
     url: "https://www.pawpwater.com/",
     description:
       "A product-focused e-commerce experience for a functional hydration brand for dogs, combining education, product discovery and wellness-focused storytelling.",
@@ -64,7 +86,7 @@ const projects = [
     title: "Anzza",
     category: "E-COMMERCE · FOOD & BEVERAGE",
     type: "website",
-    image: "/images/Anza.svg",
+    image: Anzza,
     url: "https://snackanzza.com/",
     description:
       "A visual-first product experience for Anzza, a snack brand turning pineapple into crisp, fruit-infused chips with a distinctive and playful identity.",
@@ -73,7 +95,7 @@ const projects = [
     title: "HOVN Studios",
     category: "CREATIVE STUDIO · FILM & PHOTO",
     type: "website",
-    image: "/images/HOVN.svg",
+    image: Hovn,
     url: "https://hovnstudios.com/",
     description:
       "A visually driven portfolio for an international creative studio specializing in commercial film, photography and distinctive visual campaigns.",
@@ -82,23 +104,17 @@ const projects = [
     title: "Midtown Umbrellas",
     category: "E-COMMERCE · OUTDOOR LIVING",
     type: "website",
-    image: "/images/midtown.webp",
+    image: Midtown,
     url: "https://www.midtownumbrellas.com/",
     description:
       "A product-focused e-commerce website for a premium outdoor umbrella brand, showcasing shade solutions for residential and commercial spaces.",
   },
 ];
-
-
-export default function ProjectsGrid({
-  activeFilter,
-}: ProjectsGridProps) {
+export default function ProjectsGrid({ activeFilter }: ProjectsGridProps) {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter(
-          (project) => project.type === activeFilter
-        );
+      : projects.filter((project) => project.type === activeFilter);
 
   if (filteredProjects.length === 0) {
     return null;
@@ -107,7 +123,6 @@ export default function ProjectsGrid({
   return (
     <section className="w-full bg-[#FFFFF0] px-6 pb-12 md:px-12 md:pb-16">
       <div className="mx-auto max-w-7xl md:pt-10">
-
         {/* Heading */}
         <FadeUp>
           <h2 className="mb-3 text-2xl text-center md:text-left font-bold uppercase tracking-[0.05em] text-[#06265f] md:mb-3 md:text-[21px]">
@@ -116,12 +131,9 @@ export default function ProjectsGrid({
         </FadeUp>
 
         {/* Grid */}
-        <div className="mt-5 grid md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-6">
+        <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-3">
           {filteredProjects.map((project, index) => (
-            <FadeUp
-              key={project.title}
-              delay={index * 0.08}
-            >
+            <FadeUp key={project.title} delay={index * 0.08}>
               <ProjectCard
                 title={project.title}
                 image={project.image}
@@ -132,7 +144,6 @@ export default function ProjectsGrid({
             </FadeUp>
           ))}
         </div>
-
       </div>
     </section>
   );
