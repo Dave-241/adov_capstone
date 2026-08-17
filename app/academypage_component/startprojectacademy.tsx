@@ -63,13 +63,13 @@ export default function Startyourtech() {
         <div className="flex gap-5 justify-center">
           <Link
             href="/contact"
-            className="bg-[#ffff]  hover:bg-[#618bd4] text-[#042a6b]  hover:text-white text-sm font-medium px-6 py-3 rounded-full transition"
+            className="bg-[#ffff]  hover:bg-[#618bd4] text-[#042a6b] items-center flex justify-center hover:text-white text-sm font-medium px-6 py-3 rounded-full transition"
           >
             Register now
           </Link>
           <Link
             href="/contact"
-            className="border hover:bg-[#042a6b] text-white text-sm font-medium px-6 py-3 rounded-full transition"
+            className="border hover:bg-[#042a6b] text-white text-sm font-medium px-6 py-3 items-center flex justify-center rounded-full transition"
           >
             Login to dashboard
           </Link>

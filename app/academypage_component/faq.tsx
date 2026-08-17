@@ -37,7 +37,7 @@ const FaqSection = () => {
       <div className="max-w-7xl mx-auto ">
         {/* Header */}
         <div className="flex flex-col items-start mb-4">
-          <span className=" font-bold tracking-wide text-[#031F4F] mb-2">
+          <span className=" text-2xl font-bold tracking-wide text-[#031F4F] mb-2">
             FAQ
           </span>
           
