@@ -10,7 +10,7 @@ import Test from "./hompage_component/test";
 
 const page = () => {
   return (
-    <main className="bg-[#fdfbe9]">
+    <main className="bg-[#fffff0]">
       <Hero />
 
       <Services />

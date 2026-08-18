@@ -17,36 +17,36 @@
 // import { motion, AnimatePresence } from "framer-motion";
 
 // const faqs = [
-//   {
-//     question: "What does Adov do?",
-//     answer:
-//       "Adov is a digital company that builds complete websites from start to finish and provides UI/UX design and branding services. Our flagship service is full website design and development, covering both the frontend and the backend.",
-//   },
-//   {
-//     question: "Does Adov build both the frontend and backend of a website?",
-//     answer:
-//       "Yes. Adov builds full websites end to end, handling both the frontend that visitors see and the backend that powers the site, so clients receive a complete, working website.",
-//   },
-//   {
-//     question: "What makes Adov different from other digital companies?",
-//     answer:
-//       "We focus on creating complete digital experiences rather than just individual parts of a website. From strategy and design to development and branding, we bring everything together to create a clear and consistent experience for your users.",
-//   },
-//   {
-//     question: "Does Adov provide UI/UX design?",
-//     answer:
-//       "Yes. We create clean, intuitive, and user-friendly interfaces that make digital products easy to understand and enjoyable to use. Our process can include user research, wireframes, prototypes, and polished final designs.",
-//   },
-//   {
-//     question: "Does Adov offer branding services?",
-//     answer:
-//       "Yes. We help businesses build a strong and consistent visual identity through color palettes, typography, visual direction, brand guidelines, and supporting brand assets.",
-//   },
-//   {
-//     question: "Can Adov redesign an existing website?",
-//     answer:
-//       "Yes. If you already have a website but want to improve its design, user experience, performance, or overall appearance, we can redesign and rebuild it to better fit your business and audience.",
-//   },
+  // {
+  //   question: "What does Adov do?",
+  //   answer:
+  //     "Adov is a digital company that builds complete websites from start to finish and provides UI/UX design and branding services. Our flagship service is full website design and development, covering both the frontend and the backend.",
+  // },
+  // {
+  //   question: "Does Adov build both the frontend and backend of a website?",
+  //   answer:
+  //     "Yes. Adov builds full websites end to end, handling both the frontend that visitors see and the backend that powers the site, so clients receive a complete, working website.",
+  // },
+  // {
+  //   question: "What makes Adov different from other digital companies?",
+  //   answer:
+  //     "We focus on creating complete digital experiences rather than just individual parts of a website. From strategy and design to development and branding, we bring everything together to create a clear and consistent experience for your users.",
+  // },
+  // {
+  //   question: "Does Adov provide UI/UX design?",
+  //   answer:
+  //     "Yes. We create clean, intuitive, and user-friendly interfaces that make digital products easy to understand and enjoyable to use. Our process can include user research, wireframes, prototypes, and polished final designs.",
+  // },
+  // {
+  //   question: "Does Adov offer branding services?",
+  //   answer:
+  //     "Yes. We help businesses build a strong and consistent visual identity through color palettes, typography, visual direction, brand guidelines, and supporting brand assets.",
+  // },
+  // {
+  //   question: "Can Adov redesign an existing website?",
+  //   answer:
+  //     "Yes. If you already have a website but want to improve its design, user experience, performance, or overall appearance, we can redesign and rebuild it to better fit your business and audience.",
+  // },
 // ];
 
 // export default function ImageTest () {
@@ -147,20 +147,36 @@
 import { useState } from "react";
 
 const faqs = [
-  {
-    question: "What services does Adov offer?",
+
+    {
+    question: "What does Adov do?",
     answer:
-      "Adov offers three core services: full website design and development, UI/UX design, and branding. Website development is our flagship service and covers both frontend and backend.",
+      "Adov is a digital company that builds complete websites from start to finish and provides UI/UX design and branding services. Our flagship service is full website design and development, covering both the frontend and the backend.",
   },
   {
-    question: "Can Adov design a brand and build the website too?",
+    question: "Does Adov build both the frontend and backend of a website?",
     answer:
-      "Yes. Adov can handle your branding and your website together, so your identity and your site stay consistent and professional from start to finish.",
+      "Yes. Adov builds full websites end to end, handling both the frontend that visitors see and the backend that powers the site, so clients receive a complete, working website.",
   },
   {
-    question: "How much does a website from Adov cost?",
+    question: "What makes Adov different from other digital companies?",
     answer:
-      "The cost depends on the size and features of your website. Contact us with your requirements and we will provide a clear quote.",
+      "We focus on creating complete digital experiences rather than just individual parts of a website. From strategy and design to development and branding, we bring everything together to create a clear and consistent experience for your users.",
+  },
+  {
+    question: "Does Adov provide UI/UX design?",
+    answer:
+      "Yes. We create clean, intuitive, and user-friendly interfaces that make digital products easy to understand and enjoyable to use. Our process can include user research, wireframes, prototypes, and polished final designs.",
+  },
+  {
+    question: "Does Adov offer branding services?",
+    answer:
+      "Yes. We help businesses build a strong and consistent visual identity through color palettes, typography, visual direction, brand guidelines, and supporting brand assets.",
+  },
+  {
+    question: "Can Adov redesign an existing website?",
+    answer:
+      "Yes. If you already have a website but want to improve its design, user experience, performance, or overall appearance, we can redesign and rebuild it to better fit your business and audience.",
   },
 ];
 
@@ -175,9 +191,9 @@ export default function FAQ() {
     <section className="w-full bg-[#FFFFF0] px-6 py-16 md:px-12 md:py-20">
       <div className="mx-auto max-w-6xl">
         {/* Section heading */}
-        <p className="mb-6 font-bold text-xl uppercase tracking-wide text-[#06265F]">
-          FAQ
-        </p>
+        <h3 className="mb-6 font-bold text-2xl tracking-wide text-[#06265F]">
+          FAQs
+        </h3>
 
         <div className="border-t border-[#D9D9D0]">
           {faqs.map((faq, index) => {

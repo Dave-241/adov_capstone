@@ -28,9 +28,9 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="max-w-7xl mx-auto bg-[#fffff0]">
+    <div className="max-w-7xl mx-auto bg-[#fffff0] px-15 md:px-0">
       <div className="max-w-2xl mx-auto py-12">
-        <h3 className="text-3xl uppercase font-bold text-center py-3 mb-3 mt-5">
+        <h3 className="text-3xl uppercase font-bold text-center py-3 mb-3 mt-5 text-[#07152f]">
           what we do
         </h3>
         <p className="text-center text-balance ">

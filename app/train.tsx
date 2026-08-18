@@ -8,7 +8,7 @@ export default function Train() {
     { num: "04", label: "Branding", color: "bg-orange-400" },
   ];
   return (
-    <section className="  py-12  md:px-12 px-4">
+    <section className="py-12  md:px-12 px-4 bg-[#fffff0]">
       <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl p-10 md:p-12 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: copy + CTAs */}
         <div className="">
@@ -26,9 +26,9 @@ export default function Train() {
           </p>
 
           <div className="flex items-center justify-center gap-4">
-        <button className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
+        <Link href="academy" className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
           Discover the Academy
-         </button>
+         </Link>
 </div>
         </div>
 

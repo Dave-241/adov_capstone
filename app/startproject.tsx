@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Startyourtech() {
   return (
-    <section className="bg-[#fdfbe9] px-6 py pt-10">
+    <section className="bg-[#fffff0] px-6 py pt-10">
       <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl text-center py-16 ">
         {/* <p className="text-sky-400 text-sm font-medium mb-3">
           Let&apos;s Build What&apos;s Next—Together.
