@@ -12,13 +12,12 @@ export default function WorksHero({
       <div className="mx-auto flex max-w-3xl gap-3 md:gap-3 flex-col items-center text-center">
         {/* Main heading */}
         <h1 className="text-4xl font-medium leading-[1.1] tracking-[-0.02em] text-[#06265f] md:text-7xl lg:text-7xl">
-          Websites, Design & Branding We're Proud Of
+          Projects We're Proud Of
         </h1>
 
         {/* Description */}
         <p className=" text-base text-[#6d6d6d] md:max-w-sm  md:text-[16px] font-medium">
-          Every project reflects the care and skill we bring to our work.
-          Explore our websites, UI/UX, and branding projects.
+          Every project reflects the skill we bring to our work. Explore our websites, UI/UX, and branding projects.
         </p>
 
         {/* Category buttons */}
