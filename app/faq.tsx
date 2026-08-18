@@ -1,4 +1,3 @@
-      desc: "Design, branding and build happen under one roof, so nothing gets lost in handoff.",
 "use client";
 
 import { useState } from "react";
