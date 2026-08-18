@@ -39,7 +39,7 @@ export default function UISection({ activeFilter }: UISectionProps) {
 
         {/* UI Cards */}
         <FadeUp delay={0.15}>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-3 lg:grid-cols-3 gap-4">
             {filteredProjects.map((project) => (
               <UICard
                 key={project.id}
