@@ -8,7 +8,7 @@ import Startp from "@/app/service_page/startp";
 import Web_button from "@/app/service_page/web_button";
 import Uiux_button from "@/app/service_page/uiux_button";
 import Branding_button from "@/app/service_page/branding_button";
-import Faq from "@/app/service_page/faq";
+import Service_faq from "@/app/service_page/service_faq";
 
 
 import SectionTitle from "./section_title";
@@ -46,7 +46,7 @@ const page = () => {
  
     </div>
           <Startp/>  
-          <Faq/>                 </>
+          <Service_faq/>                 </>
 
       
   );
