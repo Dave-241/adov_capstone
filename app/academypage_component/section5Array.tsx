@@ -26,17 +26,18 @@ const disciplines: Discipline[] = [
       "Power the systems, logic, and data that make websites and apps work.",
     image: backend,
   },
+    {
+    title: "Branding",
+    description: "Create visual identities that businesses are proud to wear.",
+    image: branding,
+  },
   {
     title: "UI/UX Design",
     description:
       "Design simple, beautiful, and effective digital experiences using tools like Figma.",
     image: ui,
   },
-  {
-    title: "Branding",
-    description: "Create visual identities that businesses are proud to wear.",
-    image: branding,
-  },
+
 ];
 
 const Section3 = () => {

@@ -1,80 +1,118 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import { MapPin, ListChecks, Users, Award } from "lucide-react";
+import Image from "next/image";
+import onsite from "@/public/how1.webp";
+import communitydrn from "@/public/how2.webp";
+import projectbased from "@/public/how3.webp";
+import built from "@/public/how4.webp";
 
-const features = [
+type Feature = {
+  image: typeof onsite;
+  alt: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  reverse: boolean;
+};
+
+const features: Feature[] = [
   {
-    icon: MapPin,
-    text: "Onsite and hands-on, you learn in a focused, supportive, in-person environment.",
+    image: onsite,
+    alt: "Onsite, hands-on learning environment",
+    eyebrow: "01 — Onsite",
+    title: "Onsite and hands-on, you learn in a focused, supportive, in-person environment.",
+    description:
+      "The setting is structured to keep distractions away, so your attention stays on the material. Instructors and peers are physically present to guide, encourage, and help you whenever you need it.",
+    reverse: false,
   },
   {
-    icon: ListChecks,
-    text: "Project-based, you finish the program with a real project in your portfolio.",
+    image: projectbased,
+    alt: "Project-based portfolio work",
+    eyebrow: "02 — Project-based",
+    title: "Project-based, you finish the program with a real project in your portfolio.",
+    description:
+      "By the time you finish, you'll have completed a real, working project from start to end. That project becomes part of your portfolio, giving you tangible proof of your skills to show employers.",
+    reverse: true,
   },
   {
-    icon: Users,
-    text: "Community-driven, you grow alongside a cohort of people who push you forward.",
+    image: communitydrn,
+    alt: "Community-driven cohort",
+    eyebrow: "03 — Community-driven",
+    title: "Community-driven, you grow alongside a cohort of people who push you forward.",
+    description:
+      "You're learning as part of a group, not on your own, surrounded by people working toward similar goals. That shared journey keeps you motivated and accountable, as the people around you challenge you to keep improving.",
+    reverse: false,
   },
   {
-    icon: Award,
-    text: "Built for outcomes, our top-performing trainees are considered for real job opportunities.",
+    image: built,
+    alt: "Trainees landing real job opportunities",
+    eyebrow: "04 — Built for outcomes",
+    title: "Built for outcomes, our top-performing trainees are considered for real job opportunities.",
+    description:
+      "The program is designed with a clear end goal: helping you actually land a job, not just complete training. If you perform well, you stand a real chance of being considered for genuine job openings connected to the program.",
+    reverse: true,
   },
 ];
 
-const FeatureBadges = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
+const Section3Array = () => {
   return (
-    <div className="bg-[#FFFFF0]">
-      <div
-        ref={containerRef}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mx-auto"
-      >
-        {features.map((item, index) => {
-          const Icon = item.icon;
-          return (
+    <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl flex flex-col gap-6 sm:gap-8 mt-4">
+        {features.map((feature, idx) => (
+          <div
+            key={idx}
+            className={`
+              group relative rounded-2xl sm:rounded-3xl overflow-hidden
+              bg-white border border-gray-100
+              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+              hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)]
+              transition-shadow duration-500 ease-out
+              grid grid-cols-1 md:grid-cols-2
+            `}
+          >
+            {/* Image */}
             <div
-              key={item.text}
-              className={`bg-white rounded-4xl  border-black/5 shadow-sm p-4 flex flex-col gap-2 transition-all duration-700 ease-out ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
-              }}
+              className={`
+                relative overflow-hidden aspect-[4/3] md:aspect-auto
+                ${feature.reverse ? "md:order-2" : "md:order-1"}
+              `}
             >
-              <div className="w-7 h-7 rounded-full bg-[#F3EEDD] flex items-center justify-center">
-                <Icon className="w-3.5 h-3.5 text-[#031F4F]" strokeWidth={2} />
-              </div>
-              <p className="text-[12px] text-[#7B899A] leading-relaxed">
-                {item.text}
-              </p>
+              <Image
+                src={feature.image}
+                alt={feature.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                priority={idx === 0}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent md:bg-none" />
             </div>
-          );
-        })}
+
+            {/* Text */}
+            <div
+              className={`
+                flex flex-col justify-center gap-4
+                px-6 py-8 sm:px-10 sm:py-10 md:px-12 md:py-12
+                ${feature.reverse ? "md:order-1" : "md:order-2"}
+              `}
+            >
+              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#B08D57]">
+                {feature.eyebrow}
+              </span>
+
+              <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] font-semibold leading-snug text-gray-900">
+                {feature.title}
+              </h1>
+
+              <p className="text-sm sm:text-base leading-relaxed text-[#7a7a7a]">
+                {feature.description}
+              </p>
+
+              <div className="h-[2px] w-10 bg-gradient-to-r from-[#B08D57] to-transparent mt-1 transition-all duration-500 group-hover:w-16" />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default FeatureBadges;
+export default Section3Array;

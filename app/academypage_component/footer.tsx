@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import adovlogo from "@/public/adovlogo.svg";
-import footerlogo from "@/public/Vector (1).svg";
+import footerlogo from "@/public/Vector (3).svg";
 import insta from "@/public/Group.svg";
 
 const UnderlineLink = ({
@@ -71,7 +71,7 @@ const Footer = () => {
               Creating experiences. Empowering growth.
             </h1>
           </div>
-          <div className="  flex gap-3 ">
+          <div className="  flex gap-3 flex-col md:flex-row ">
             <div className="flex flex-col  gap-2">
               <Link
                 href={"/"}
