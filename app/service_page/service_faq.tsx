@@ -32,7 +32,7 @@ export default function FAQ() {
       <div className="mx-auto max-w-6xl">
 
         {/* Section heading */}
-        <p className="mb-6 font-bold text-2xl uppercase tracking-wide text-[#06265F]">
+        <p className="mb-6 font-bold text-xl uppercase tracking-wide text-[#06265F]">
           FAQ
         </p>
 
@@ -47,7 +47,7 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(index)}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="text-lg font-semibold text-[#111111] md:text-2xl">
+                  <span className="text-lg font-medium text-[#111111] md:text-xl">
                     {faq.question}
                   </span>
 
@@ -59,7 +59,7 @@ export default function FAQ() {
                 {/* Answer */}
                 {isOpen && (
                   <div className="pb-6 pr-12">
-                    <p className="text-sm leading-relaxed text-[#858585] md:text-xl">
+                    <p className="text-sm leading-relaxed font-light text-[#858585] md:text-md">
                       {faq.answer}
                     </p>
                   </div>

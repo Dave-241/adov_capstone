@@ -1,53 +1,60 @@
-"use client";
+import React from "react";
 
-import Link from "next/link";
-
-export default function Hero() {
+const Hero = () => {
   return (
-    <div className="bg-[#fffff0] relative w-full px-4 sm:px-8 md:px-12 overflow-hidden flex items-center md:min-h-[70vh] min-h-[60vh] py-16 sm:py-24 md:py-32">
-      {/* Background video */}
+    <div className="bg-[#fffff0] relative w-full px-4 md:p-16 overflow-hidden flex items-end min-h-[80vh] py-16 ">
+      {/* Darker video for better text contrast */}
       <video
-        src="/herovideo2.mp4"
+        src="/hero_session3.mp4"
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.4]" // Darker video for better text contrast
+        className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
       />
+      <div className="absolute bottom-0 left-0 w-full  bg-linear-to-t   h-[50%] from-black" />
 
-      {/* Overlay - Radial is often better when centering text */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/40 via-black/60 to-black/80" />
-
-      {/* Text content - Crucially added 'items-center' and 'text-center' */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-center items-center text-center md:items-start md:text-left">
-        <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-tight">
-          Where Ideas <br className="" />
-          Become <span className="text-[#00CFFF]">Impact.</span>{" "}
-          {/* Adjusted high-contrast highlight */}
-        </h1>
-
-        <p className="text-gray-100 text-balance font-normal mt-4 text-center md:text-left text-sm  md:mx-0">
-          Partnering with businesses to build exceptional digital products and
-          future-ready talent.
+      <div className="relative text-balance  z-10 w-full max-w-6xl ">
+        <h2 className=" text-6xl text-white  font-bold  max-w-4xl  py-12">
+          Full Website Design & Development.
+        </h2>
+        <p className="max-w-4xl text-xl text-slate-100">
+          At Adov, we turn your ideas into high performing websites and handle
+          everything from frontend to backend. Our UI/UX and branding services
+          complete the picture, giving you one team, one standard, and one
+          seamless result.
         </p>
 
-        {/* Buttons Container - Updated to ensure full width on mobile and centered */}
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 sm:mt-10 w-full max-w-md sm:max-w-none justify-center md:justify-start">
-          <Link
+        <div className="flex flex-col w-fit  gap-4 mt-8 sm:mt-10 max-w-md sm:max-w-none justify-center">
+          <a
             href="/contact"
-            className="block sm:inline-block bg-[#0f172b] text-white text-base font-semibold px-8 py-3 rounded-full hover:bg-slate-800 transition-colors text-center w-full sm:w-auto"
+            className=" hidden bg-[#031F4F] text-white text-base font-semibold px-8 py-4 rounded-full hover:bg-slate-800 transition-colors  w-full sm:w-auto"
           >
-            Start a project +
-          </Link>
+            Get a website
+          </a>
 
-          <Link
-            href="/works"
-            className="block sm:inline-block bg-white text-[#0f172b] text-base font-semibold px-8 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors text-center w-full sm:w-auto"
+          <a
+            href="/services"
+            className="block  bg-white text-[#0f172b] text-base font-semibold px-8 py-4 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors  w-full sm:w-auto"
           >
-            See our work
-          </Link>
+            Explore Our Services
+          </a>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Hero;
+
+<div className="max-w-2xl mx-auto py-12">
+  <h3 className="text-3xl uppercase font-bold text-white  py-3 mb-3 mt-5">
+    what we do
+  </h3>
+  <p className=" text-balance text-slate-100">
+    Adov is a full-service digital company. Whether you are launching a new
+    business, upgrading an old website, or building a brand from scratch, we
+    bring the skill, care, and consistency to get it done right. Here is what we
+    offer:
+  </p>
+</div>;

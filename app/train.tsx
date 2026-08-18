@@ -11,24 +11,25 @@ export default function Train() {
     <section className="  py-12  md:px-12 px-4">
       <div className="max-w-7xl mx-auto bg-[#031F4F] rounded-3xl p-10 md:p-12 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: copy + CTAs */}
-        <div>
+        <div className="">
           <p className="text-sky-400 text-xs font-semibold #10A4EA font-inter tracking-wide uppercase mb-4">
             Train with Adov Academy
           </p>
           <h2 className="text-white text-3xl md:text-4xl font-bold leading-tight mb-4">
             Learn to build what we build.
           </h2>
-          <p className="text-slate-300 text-sm mb-8 max-w-sm">
-            A five-week, hands-on program covering frontend, backend, UI/UX and
-            branding. Cohort 1 is live now.
+            <p className="text-slate-300 text-sm mb-8 max-w-sm">
+            Beyond building for clients, we build people. Train with Adov
+            Academy is an intensive, project-based program that takes ambitious
+            beginners and turns them into job-ready professionals. Real skills,
+            real projects, real career growth.
           </p>
 
-          <div className="flex items-center gap-4">
-            <Link href={'/contact'} className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-12 py-3 rounded-full transition">
-              Register now
-            </Link>
-         
-          </div>
+          <div className="flex items-center justify-center gap-4">
+        <button className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
+          Discover the Academy
+         </button>
+</div>
         </div>
 
         {/* Right: module list */}
