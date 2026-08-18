@@ -1,3 +1,5 @@
+
+
 "use client";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
@@ -23,75 +25,57 @@ const faqs = [
       "The program runs for five weeks, combining classes with a hands-on team project.",
   },
 ];
+export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-const FaqSection = () => {
-  // First item open by default, like the reference design.
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="bg-[#FFFFF0]   mt-4 md:p-12  px-3 ">
-      <div className="max-w-7xl mx-auto ">
-        {/* Header */}
-        <div className="flex flex-col items-start mb-4">
-          <span className=" text-2xl font-bold tracking-wide text-[#031F4F] mb-2">
-            FAQ
-          </span>
-          
-        </div>
+    <section className="w-full bg-[#FFFFF0] px-6 py-16 md:px-12 ">
+      <div className="mx-auto max-w-6xl">
 
-        {/* Accordion list */}
-        <div>
-          {faqs.map((item, index) => {
+        {/* Section heading */}
+        <p className="mb-6 font-bold text-xl tracking-wide text-[#06265F]">
+          FAQs
+        </p>
+        
+
+        <div className="border-t border-[#D9D9D0]">
+          {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
+
             return (
-              <div
-                key={item.question}
-                className={`py-6 ${
-                  index !== faqs.length - 1 ? "border-b border-black/10" : ""
-                }`}
-              >
+              <div key={faq.question} className="border-b border-[#D9D9D0]">
                 <button
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
-                  className="w-full flex items-start justify-between gap-4 text-left"
+                  type="button"
+                  onClick={() => toggleFAQ(index)}
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="text-[17px] sm:text-[18px] font-semibold text-[#031F4F] leading-snug">
-                    {item.question}
+                  <span className="text-lg font-medium text-[#111111] md:text-xl">
+                    {faq.question}
                   </span>
-                  <span className="shrink-0 mt-1 text-[#031F4F]">
-                    {isOpen ? (
-                      <Minus className="w-4 h-4" strokeWidth={2} />
-                    ) : (
-                      <Plus className="w-4 h-4" strokeWidth={2} />
-                    )}
+
+                  <span className="flex-shrink-0 text-2xl font-light text-[#777777]">
+                    {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
-                <div
-                  className={`grid transition-all duration-300 ease-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100 mt-3"
-                      : "grid-rows-[0fr] opacity-0 mt-0"
-                  }`}
-                  style={{ display: "grid" }}
-                >
-                  <div className="overflow-hidden">
-                    <p className="text-[14px] text-[#7B899A] leading-relaxed pr-6">
-                      {item.answer}
+                {/* Answer */}
+                {isOpen && (
+                  <div className="pb-6 pr-12">
+                    <p className="text-sm leading-relaxed font-light text-[#858585] md:text-md">
+                      {faq.answer}
                     </p>
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default FaqSection;
+      </div>
+    </section>
+  );
+}

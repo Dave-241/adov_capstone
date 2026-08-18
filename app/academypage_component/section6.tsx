@@ -50,10 +50,10 @@ const Section6 = () => {
         }
       `}</style>
       <div className="flex flex-col max-w-7xl gap-4 mx-auto justify-center w-full">
-        <h3 className="font-bold  text-2xl md:text-base text-[#031F4F]">
+        <h3 className="font-medium text-2xl md:text-4xl text-[#031F4F] w-full max-w-[550px] leading-tight">
           Our Cohorts
         </h3>
-        <p className="text-sm  text-[#808080] ">
+        <p className="font-medium text-balance text-[14px] md:text-[16px] text-[#7B899A] ">
           Each cohort is a new group of trainees taking the journey together. We
           are currently running Cohort 1, and this is only the beginning.
         </p>

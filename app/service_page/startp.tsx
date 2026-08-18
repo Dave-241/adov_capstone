@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function StartProject() {
   return (
     <section className=" md:pt-20  w-full mx-auto max-w-7xl md:px-12  px-4 pt-12 ">
-      <div className=" mx-auto w-full bg-[#031F4F] rounded-3xl text-center py-12 md:pt-16 md:pb-30">
+      <div className=" mx-auto w-full bg-[#031F4F] rounded-3xl text-center py-12 md:py-16 ">
         <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
           Not Sure Which Service You Need?
         </h2>
