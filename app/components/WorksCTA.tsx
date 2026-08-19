@@ -1,19 +1,27 @@
 import Link from "next/link";
 
 export default function StartProject() {
-  return (
-    <section className=" md:pt-20  w-full mx-auto max-w-7xl md:px-12  px-4 pt-12 ">
-      <div className=" mx-auto w-full bg-[#031F4F] rounded-3xl text-center py-12 md:pt-16 md:pb-30">
-        <h2 className="text-white text-2xl md:text-3xl font-bold">
-          Like What You See?</h2>
-        <p className="text-slate-300 text-balance text-xs md:px-0  mb-8">
-          This is just a taste of what we can build. Let us create something just as impressive for your business.</p>
-        <Link
-          href="/contact"
-          className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-medium px-6 py-3 rounded-full transition">
-          Start your project
-        </Link>
-      </div>
-    </section>
-  );
+  return (
+    <section className="w-full mx-auto max-w-7xl px-4 pt-12 md:px-12 md:pt-20">
+      <div className="w-full rounded-3xl bg-[#031F4F] px-6 py-12 text-center md:px-12 md:py-16">
+        
+        <h2 className="text-2xl font-bold leading-tight text-white md:text-3xl">
+          Like What You See?
+        </h2>
+
+        <p className="mx-auto mt-4 max-w-2xl text-xs leading-relaxed text-slate-300 md:text-sm">
+          This is just a taste of what we can build. Let us create something
+          just as impressive for your business.
+        </p>
+
+        <Link
+          href="/contact"
+          className="mx-auto mt-8 inline-flex h-12 items-center justify-center rounded-full bg-sky-500 px-7 text-sm font-medium text-white transition hover:bg-sky-400"
+        >
+          Start your project
+        </Link>
+
+      </div>
+    </section>
+  );
 }
