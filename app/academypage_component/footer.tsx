@@ -58,7 +58,7 @@ const Footer = () => {
   return (
     <div className=" px-3  md:px-12">
       <div className="    mx-auto max-w-7xl  ">
-        <div className=" flex md:flex-row flex-col md:justify-between gap-8  mx-auto py-10 md:py-12 border-b border-[#7B899A]   -[#7B899A] ">
+        <div className=" flex md:flex-row flex-col md:justify-between gap-8  mx-auto py-10 md:py-12 ">
           <div className="flex w-full gap-3   flex-col  md:col-span-1 ">
             <div className="">
               <Image

@@ -89,7 +89,7 @@ const cardVariant = {
 
 const Section3Array = () => {
   return (
-    <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8">
+    <div className="">
       <div className="w-full max-w-7xl flex flex-col gap-6 sm:gap-8 mt-4">
         {features.map((feature, idx) => (
           <motion.div
